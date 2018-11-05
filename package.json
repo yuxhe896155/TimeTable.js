@@ -1,0 +1,33 @@
+{
+  "name": "timetable.js",
+  "version": "1.0.0",
+  "description": "![NOTE_ICON](img/note.png)\r ## About\r JavaScript (ES6) library for creating time table.\r It worked jQuery 1.4.1+.",
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yn1323/TimeTable.js.git"
+  },
+  "keywords": [],
+  "author": "ynatani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yn1323/TimeTable.js/issues"
+  },
+  "homepage": "https://github.com/yn1323/TimeTable.js#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "css-loader": "^1.0.1",
+    "gulp": "^3.9.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.25.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-stream": "^5.1.1"
+  }
+}

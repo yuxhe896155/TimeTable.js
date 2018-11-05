@@ -20,6 +20,11 @@ module.exports = {
         "indent"          : ["error",4],
         "linebreak-style" : ["error","windows"],
         "quotes"          : ["error","double"],
-        "semi"            : ["error","always"]
+        "semi"            : ["error","always"],
+        "no-useless-rename": ["error", {
+            "ignoreDestructuring": true,
+            "ignoreImport": true,
+            "ignoreExport": true
+        }]
     }
 };
