@@ -1,4 +1,14 @@
 import main from "./js/main";
 import "./css/main.css";
+require("bulma");
+ 
+let Vue = require("vue");
 
-main();
+console.log("OK");
+new Vue({
+    el: '#app',
+    data: {
+      test: "TEST"
+    },
+  });
+let a = new main();

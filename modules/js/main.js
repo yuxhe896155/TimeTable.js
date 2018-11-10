@@ -1,3 +1,5 @@
-export default function main(){
-
+export default class main{
+    constructor(){
+        //alert("OK"); 
+    }
 }
