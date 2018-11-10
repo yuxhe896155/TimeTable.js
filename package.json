@@ -2,7 +2,7 @@
   "name": "timetable.js",
   "version": "1.0.0",
   "description": "![NOTE_ICON](img/note.png)\r ## About\r JavaScript (ES6) library for creating time table.\r It worked jQuery 1.4.1+.",
-  "main": ".eslintrc.js",
+  "main": "modules\\app.js",
   "directories": {
     "test": "test"
   },
