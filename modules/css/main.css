@@ -1,2 +1,65 @@
 @charset "UTF-8";
 
+:root{
+    --rgbTheme:       19,113,171;    /* Theme Color of Table                */
+    --rgbFont:        50, 50, 50;    /* Font Color of tbody                 */
+    --rgbHeaderFont:  255, 255, 255; /* Font Color of thead                 */
+    --rgbRow:         255, 255, 255; /* Color of Odd Row                    */
+    --opHeaderBorder: 1.0;           /* Border Opaticy of Header Row        */
+    --opBodyBorder:   0.2;           /* Border Opacity of Body Row          */
+    --opHeaderBg:     0.8;           /* Bacground Opacity of Header Row     */
+    --opBodyBg:       0.2;           /* Bacground Opacity of Body Row       */
+    --opHover:        0.4;           /* Bacground Opacity of Hover Body Row */
+    --fontFamily: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+.timetable{
+    border-collapse: collapse;
+    border-spacing: 0;
+    cursor: default;
+    width: 100%;
+}
+/* Table Header */
+.timetable > thead > tr{
+    height: 40px;
+}
+/* Table Body */
+.timetable > tbody > tr{
+    height: 30px;
+}
+.timetable > tbody > tr:hover{
+    background: rgba(var(--rgbTheme), var(--opHover));
+}
+/* Table Border Styles */
+.timetable > thead > tr > th{
+    border-right: none;
+    border: 1px solid rgba(var(--rgbTheme), var(--opHeaderBorder));
+}
+.timetable > thead > tr > th:last-child{
+    border-right: 1px solid rgba(var(--rgbTheme), var(--opHeaderBorder));
+}
+.timetable > tbody > tr > td{
+    border-right: none;
+    border: 1px solid rgba(var(--rgbTheme), var(--opBodyBorder));
+}
+.timetable > tbody > tr > td:last-child{
+    border-right: 1px solid rgba(var(--rgbTheme), var(--opBodyBorder));
+}
+.timetable > tbody > tr:last-child > td{
+    border-bottom: 1px solid rgba(var(--rgbTheme), var(--opBodyBorder));
+}
+/* Table Body Even Row */
+.timetable > tbody > tr:nth-child(2n){
+    background: rgba(var(--rgbTheme), var(--opBodyBg));
+}
+/* Table Header Cell (th) */
+.timetable > thead > tr > th{
+    background: rgba(var(--rgbTheme), var(--opHeaderBg));
+    color: rgba(var(--rgbHeaderFont), 1);
+    font: bold 18px/1.5 var(--fontFamily);
+}
+@media screen and (max-width:480px) {
+    .timetable{
+        display: none;
+    }
+}
