@@ -37,5 +37,5 @@ gulp.task("bs-reload", ["webpack"], ()=> {
 // ファイルの更新をwatch
 gulp.task("default", ["browser-sync"], ()=>{
     gulp.watch("./modules/**/*", ["bs-reload"]);
-    gulp.watch("./index.html",   ["bs-reload"]);
+    gulp.watch("./*.html",   ["bs-reload"]);
 });

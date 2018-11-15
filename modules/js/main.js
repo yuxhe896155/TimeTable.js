@@ -1,5 +1,12 @@
 export default class main{
     constructor(){
-        //alert("OK"); 
+        console.log("OK");
+new Vue({
+    el: '#app',
+    data: {
+      test: "TEST"
+    },
+  });
+let a = new main(); 
     }
 }

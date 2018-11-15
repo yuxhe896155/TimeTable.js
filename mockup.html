@@ -7,6 +7,7 @@
     </head>
     <body>
         <div id="app">
+            <button @click="addRow">add Row</button>
             <table class="timetable">
                 <thead>
                     <tr>
@@ -17,7 +18,7 @@
                         <th>TOTAL</th>
                     </tr>
                 </thead>
-                    <tbody>
+                <tbody>
                     <tr>
                         <td>JOHN</td>
                         <td></td>
@@ -50,24 +51,10 @@
                         <td></td>
                         <td>11:00</td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>7:45</td>
-                    </tr>
+                    <tr is=row12 v-for="n in arr" v-bind:key="n"></tr>
                 </tbody>
             </table>
+            <div v-bind:class="{'showTempRow': showTempRow, 'hideTempRow': hideTempRow}" id="tempRow"></div>
             <div class="timetableS">
                 <div class="timetableS-header">JOHN</div>
                 <div class="timetableS-body">11:00-12:00</div>

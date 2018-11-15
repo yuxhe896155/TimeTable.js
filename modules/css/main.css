@@ -168,3 +168,19 @@
         width: 100%;
     }
 }
+
+/* Layout to Add new Row */
+.showTempRow{
+    border-top: none;
+    border: 1px solid rgba(var(--rgbTheme), var(--opBodyBorder));
+    height: 30px;
+    transition: height 0.1s linear;
+    width: 100%;
+}
+.evenRowColor{
+    background: rgba(var(--rgbTheme), var(--opBodyBg));
+}
+.hideTempRow{
+    height: 0px;
+    width: 100%;
+}
