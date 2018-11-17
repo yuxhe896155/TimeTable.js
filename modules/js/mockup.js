@@ -25,11 +25,12 @@ let getTime = ((start = null)=>{
     console.log(compHour);
     return `${hour}:${minute}`;
 });
-Vue.component("row12", {
+Vue.component("row", {
     template: "<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>7:45</td></tr>",
-})
+});
+// Instance for table
 new Vue({
-    el: "#app",
+    el: "#table",
     data: {
         test: getTime(),
         test2: getTime(this.test),
@@ -40,20 +41,48 @@ new Vue({
     },
     methods:{
         addRow: function(){
-            // Adding row and its animation
-            this.showTempRow = (this.showTempRow)?false:true;
-            this.hideTempRow = (this.hideTempRow)?false:true;
+            // Adding row and animation
+            let time = 200;
+            let toggle  = ()=>{
+                this.showTempRow = (this.showTempRow)?false:true;
+                this.hideTempRow = (this.hideTempRow)?false:true;
+            };
+            document.getElementById("tempRow").style.transitionDuration = `${time/1000}s`;
+            toggle();
             if(this.arr.length%2){
                 document.getElementById("tempRow").classList.add("evenRowColor");
             }
             setTimeout(()=>{
                 this.arr.push("OK");
-                this.showTempRow = (this.showTempRow)?false:true;
-                this.hideTempRow = (this.hideTempRow)?false:true;
-            }, 100);
-            
+                toggle();
+            }, time);
         }
     }
 });
 
+new Vue({
+    el: "#card",
+    data: {
+        name: "JOHN",
+        times: ["11:00-12:00", "12:00-12:15"],
+        showTempCard: false,
+        hideTempCard: true,
+    },
+    methods: {
+        addRow: function(){
+            // Adding row and animation
+            let time = 200;
+            let toggle  = ()=>{
+                this.showTempCard = (this.showTempCard)?false:true;
+                this.hideTempCard = (this.hideTempCard)?false:true;
+            };
+            document.getElementById("tempCard").style.transitionDuration = `${time/1000}s`;
+            toggle();
+            setTimeout(()=>{
+                this.times.push("OK");
+                toggle();
+            }, time);
+        }
+    },
+});
 

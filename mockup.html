@@ -6,8 +6,8 @@
         <title>Sample</title>
     </head>
     <body>
-        <div id="app">
-            <button @click="addRow">add Row</button>
+        <div id="table">
+            <button @click="addRow">Add row</button>
             <table class="timetable">
                 <thead>
                     <tr>
@@ -51,32 +51,26 @@
                         <td></td>
                         <td>11:00</td>
                     </tr>
-                    <tr is=row12 v-for="n in arr" v-bind:key="n"></tr>
+                    <tr is=row v-for="n in arr" :key="n"></tr>
                 </tbody>
             </table>
-            <div v-bind:class="{'showTempRow': showTempRow, 'hideTempRow': hideTempRow}" id="tempRow"></div>
-            <div class="timetableS">
-                <div class="timetableS-header">JOHN</div>
-                <div class="timetableS-body">11:00-12:00</div>
-                <div class="timetableS-body">12:00-12:15</div>
-                <div class="timetableS-body">01:15</div>
-            </div>
-            <div class="timetableS">
-                <div class="timetableS-header">MARIA</div>
-                <div class="timetableS-body">11:00-12:00</div>
-                <div class="timetableS-body">01:00</div>
-            </div>
-            <div class="timetableS">
-                <div class="timetableS-header">MARIA</div>
-                <div class="timetableS-body">11:00-12:00</div>
-                <div class="timetableS-body">01:00</div>
-            </div>
-            <div class="timetableS">
-                <div class="timetableS-header">JOHN</div>
-                <div class="timetableS-body">11:00-12:00</div>
-                <div class="timetableS-body">12:00-12:15</div>
-                <div class="timetableS-body">01:15</div>
-            </div>
+            <div :class="{'showTempRow': showTempRow, 'hideTempRow': hideTempRow}" id="tempRow"></div>
+        </div>
+        <div class="timetableS" id="card">
+            <div>{{name}}<button @click="addRow"></button></div>
+            <div v-for="time in times" v-if="time" :key="time">{{time}}</div>
+            <div :class="{'showTempCard': showTempCard, 'hideTempCard': hideTempCard}" id="tempCard"></div>
+            <div>01:15</div>
+        </div>
+        <div class="timetableS">
+            <div>MARIA<button></button></div>
+            <div>11:00-12:00</div>
+            <div>01:00</div>
+        </div>
+        <div class="timetableS">
+            <div>MARIA<button></button></div>
+            <div>11:00-12:00</div>
+            <div>01:00</div>
         </div>
         <script src="./dist/TimeTable.js"></script>
     </body>

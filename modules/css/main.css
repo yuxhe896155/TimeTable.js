@@ -97,7 +97,7 @@
 }
 
 /* Header */
-.timetableS-header{
+.timetableS > div:first-child{
     background: rgba(var(--rgbTheme), var(--opHeaderBg));
     border: 1px solid rgba(var(--rgbTheme), var(--opHeaderBorder));
     color: rgba(var(--rgbHeaderFont), 1);
@@ -108,16 +108,27 @@
     text-align: center;
 }
 
-.timetableS-header:after{
-    content: "+";
+.timetableS > div:first-child > button{
+    background: transparent;
+    border: none;
+    color: rgba(var(--rgbHeaderFont), 1);
     cursor: pointer;
     font: bold 30px/40px var(--fontFamily);
     left: calc(100% - 40px);
+    outline: none;
     position: absolute;
 }
 
+.timetableS > div:first-child > button:after{
+    content: "+";
+}
+
+.timetableS > div:first-child > button:active{
+    color: rgba(var(--rgbTheme), 1);
+}
+
 /* Body */
-.timetableS-body{
+.timetableS > div:not(:first-child):not(:last-child):not(.hideTempCard):not(.showTempCard){
     background: rgba(var(--rgbSub), 1);
     border-top: none;
     border: 1px solid rgba(var(--rgbTheme), var(--opBodyBorder));
@@ -129,20 +140,19 @@
 }
 
 /* Footer */
-.timetableS > .timetableS-body:last-child{
+.timetableS > div:last-child{
     background: rgba(var(--rgbTheme), var(--opHover));
     color: rgba(var(--rgbFont), 0.98);
     cursor: default;
     font: bold 18px/40px var(--fontFamily);
+    margin: 0 0 10px 0;
+    text-align: center;
 }
 
-.timetableS > .timetableS-body:last-child:before{
+.timetableS > div:last-child:before{
     content: "Total : ";
 }
 
-.timetableS-body:last-child{
-    margin: 0 0 10px 0;
-}
 
 /* CSS for Tablet to Desktop */
 @media screen and (min-width:1024px){
@@ -174,13 +184,31 @@
     border-top: none;
     border: 1px solid rgba(var(--rgbTheme), var(--opBodyBorder));
     height: 30px;
-    transition: height 0.1s linear;
-    width: 100%;
-}
-.evenRowColor{
-    background: rgba(var(--rgbTheme), var(--opBodyBg));
+    transition: height 0.2s linear;
+    width: calc(100% - 2px);
 }
 .hideTempRow{
     height: 0px;
     width: 100%;
 }
+.evenRowColor{
+    background: rgba(var(--rgbTheme), var(--opBodyBg));
+}
+
+.showTempCard{
+    background: rgba(var(--rgbSub), 1);
+    border-top: none;
+    border: 1px solid rgba(var(--rgbTheme), var(--opBodyBorder));
+    color: rgba(var(--rgbFont), 1);
+    cursor: default;
+    font: normal 15px/40px var(--fontFamily);
+    height: 40px;
+    transition: height 0.2s linear;
+    text-align: center;
+}
+.hideTempCard{
+    height: 0px;
+    width: 100%;
+    transition: none;
+}
+
