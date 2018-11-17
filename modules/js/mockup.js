@@ -86,3 +86,14 @@ new Vue({
     },
 });
 
+new Vue({
+    el: "#overlay",
+    data: {
+        show: true,
+    },
+    methods: {
+        toggle: function(){
+            this.show = (this.show)?false:true;
+        }
+    }
+});

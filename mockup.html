@@ -6,6 +6,7 @@
         <title>Sample</title>
     </head>
     <body>
+        <!-- Show in desktop -->
         <div id="table">
             <button @click="addRow">Add row</button>
             <table class="timetable">
@@ -56,6 +57,7 @@
             </table>
             <div :class="{'showTempRow': showTempRow, 'hideTempRow': hideTempRow}" id="tempRow"></div>
         </div>
+        <!-- Show in mobile and tablet -->
         <div class="timetableS" id="card">
             <div>{{name}}<button @click="addRow"></button></div>
             <div v-for="time in times" v-if="time" :key="time">{{time}}</div>
@@ -71,6 +73,14 @@
             <div>MARIA<button></button></div>
             <div>11:00-12:00</div>
             <div>01:00</div>
+        </div>
+        <!-- Show in mobile and tablet -->
+        <div id="overlay"><button @click="toggle">Show overlay</button>
+            <div v-show="show" class="timetableOverlay">
+                <div class="timetableModal">
+                    <div></div>
+                </div>
+            </div>
         </div>
         <script src="./dist/TimeTable.js"></script>
     </body>

@@ -6,6 +6,7 @@
     --rgbFont:        40, 40, 40;    /* Font Color of tbody                 */
     --rgbHeaderFont:  255, 255, 255; /* Font Color of thead                 */
     --rgbRow:         255, 255, 255; /* Color of Odd Row                    */
+    --rgbaOverlay:    0, 0, 0, 0.3;  /* Color and Opacity of overlay        */
     --opHeaderBorder: 1.0;           /* Border Opaticy of Header Row        */
     --opBodyBorder:   0.2;           /* Border Opacity of Body Row          */
     --opHeaderBg:     0.8;           /* Bacground Opacity of Header Row     */
@@ -194,7 +195,7 @@
 .evenRowColor{
     background: rgba(var(--rgbTheme), var(--opBodyBg));
 }
-
+/* Layout to Add new Row to Card */
 .showTempCard{
     background: rgba(var(--rgbSub), 1);
     border-top: none;
@@ -212,3 +213,15 @@
     transition: none;
 }
 
+/* Overlay */
+.timetableOverlay{
+    background: rgba(var(--rgbaOverlay));
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Modal Layout */
