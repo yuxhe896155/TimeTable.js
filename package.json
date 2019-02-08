@@ -7,9 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
     "test": "jest",
+    "build": "webpack",
     "coverage": "npm test -- --coverage"
   },
   "repository": {
@@ -36,9 +35,9 @@
     "webpack-stream": "^5.1.1"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "vue": "^2.6.3"
   },
-  "jest":{
+  "jest": {
     "verbose": true
   }
 }
