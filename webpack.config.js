@@ -1,8 +1,5 @@
 let file = {};
-file.full = "./TimeTable.js";                     //Library with Vuejs and Bulma(Non-minified)
-file.fullMin = "./TimeTable.min.js";              //Library with Vuejs and Bulma(Minified)
 file.vueMin = "./TimeTable_with_vue.min.js";      //Library with Vuejs, no Bulma(Minified)
-file.bulmaMin = "./TimeTable_with_bulma.min.js";  //Library with Bulma, no Vuejs(Minified)
 file.noneMin = "./TimeTable_simple.min.js";       //Simple Library(Minified)
 
 let entry = {};

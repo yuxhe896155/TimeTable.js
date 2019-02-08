@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/layout */ \"./modules/js/layout.js\");\n/* harmony import */ var _js_main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/main */ \"./modules/js/main.js\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/main.css */ \"./modules/css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\r\nnew _js_layout__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\n \n\n//# sourceURL=webpack:///./modules/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/main */ \"./modules/js/main.js\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/main.css */ \"./modules/css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_1__);\n// Use require in order to use in jest\r\nlet TimeTableLayout = __webpack_require__(/*! ../modules/js/layout */ \"./modules/js/layout.js\").default;\r\n\r\n\r\n\r\nnew TimeTableLayout();\n\n//# sourceURL=webpack:///./modules/app.js?");
 
 /***/ }),
 
@@ -113,11 +113,10 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!./m
 /*!******************************!*\
   !*** ./modules/js/layout.js ***!
   \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (class {\r\n    constructor(){\r\n        console.log(\"OK\");\r\n    }\r\n});\n\n//# sourceURL=webpack:///./modules/js/layout.js?");
+eval("exports.default = class{\r\n    constructor(){\r\n        console.log(\"OK\");\r\n    }\r\n    log(a){\r\n        return a + 1;\r\n    }\r\n};\n\n//# sourceURL=webpack:///./modules/js/layout.js?");
 
 /***/ }),
 
