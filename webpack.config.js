@@ -12,7 +12,6 @@ let resolve = {
     resolve: {
         alias: {
             vue: "vue/dist/vue.min.js",
-            bulma: "bulma/css/bulma.min.css"
         }
     }
 };
@@ -34,7 +33,6 @@ module.exports = {
     resolve: {
         alias: {
             vue: "vue/dist/vue.min.js",
-            bulma: "bulma/css/bulma.min.css"
         },
     },
     module: {
