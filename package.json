@@ -9,7 +9,8 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "coverage": "npm test -- --coverage"
+    "coverage": "npm test -- --coverage",
+    "jsdoc": "node_modules\\.bin\\jsdoc .\\modules -r"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "gulp-plumber": "^1.2.0",
     "gulp-webpack": "^1.5.0",
     "jest": "^24.1.0",
+    "jsdoc": "^3.5.5",
     "style-loader": "^0.23.1",
     "webpack": "^4.25.0",
     "webpack-cli": "^3.1.2",
