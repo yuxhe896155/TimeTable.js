@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/main */ \"./modules/js/main.js\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/main.css */ \"./modules/css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_1__);\n// Use require in order to use in jest\r\nlet TimeTableLayout = __webpack_require__(/*! ../modules/js/layout */ \"./modules/js/layout.js\").default;\r\n\r\n\r\n\r\nnew TimeTableLayout();\n\n//# sourceURL=webpack:///./modules/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/main */ \"./modules/js/main.js\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/main.css */ \"./modules/css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_1__);\n// Use require in order to use in jest\r\nlet TimeTableLayouat = __webpack_require__(/*! ../modules/js/layout */ \"./modules/js/layout.js\").default;\r\n\r\n\r\n\r\nnew TimeTableLayouat();\r\n\r\nTimeTable()\n\n//# sourceURL=webpack:///./modules/app.js?");
 
 /***/ }),
 
@@ -109,14 +109,25 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!./m
 
 /***/ }),
 
+/***/ "./modules/js/common/common.js":
+/*!*************************************!*\
+  !*** ./modules/js/common/common.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("exports.default = class{\r\n    /**\r\n    * Convert time working time into minutes\r\n    * If ending time passes 00:00, add 1440(24H) to returning minutes.\r\n    * @param  time {string} Format should be \"HH:MM-HH:MM\".\r\n    * @example let [o,c] = twoTime2Int('10:00-23:00')\r\n    * @return  oTime  {int} Opening time converted as minutes\r\n    * @returnb cTime  {int} Closing time converted as minutes\r\n    */\r\n    static twoTime2Int(time){\r\n        // Starting Time\r\n        let oTime = this.time2Int(time.substring(0,5));\r\n        // Ending Time\r\n        let cTime = this.time2Int(time.substring(6,11));\r\n        // Process for Ending Time exceeds 00:00\r\n        if(oTime > cTime){\r\n            // Minute of 24 hours * 60 minute\r\n            cTime += 1440;\r\n        }\r\n        return [oTime, cTime];\r\n    }\r\n    /**\r\n    * Convert time into integer\r\n    * @param  {string} time : Format should be \"HH:MM\".\r\n    * @example : time2Int(\"23:45\")\r\n    * @return  {int}        : Time converted as minutes\r\n    * @example : 1425\r\n    */\r\n    static time2Int(time){\r\n        // Hour\r\n        const h = time.substring(0,2);\r\n        // Minute\r\n        const m = time.substring(3,5);\r\n        return (parseInt(h,10) * 60 + parseInt(m,10));\r\n    }\r\n    /**\r\n    * convert time into integer\r\n    * @param  {int}   time : Time converted as minutes\r\n    * @example : int2Time(1425)\r\n    * @return  {string} returnTime : Format should be \"HH:MM\".\r\n    * @example : 23:45\r\n    */\r\n    static int2Time(time){\r\n        // Hour\r\n        let h = Math.floor(time / 60);\r\n        if(h >= 24)h -= 24;\r\n        // Minute\r\n        let m = time % 60;\r\n        // Add 0 when only 1 digit\r\n        return (this.toDoubleDigits(h) + \":\" +  this.toDoubleDigits(m));\r\n    }\r\n    /**\r\n    * Add 0 to number if it is only 1 digit\r\n    * @param  {int}    num : Number.\r\n    * @return {string} num : Number with 0.\r\n    */\r\n    static toDoubleDigits(num) {\r\n        num += \"\";\r\n        if (num.length === 1) {\r\n            num = \"0\" + num;\r\n        }\r\n        return num;\r\n    }\r\n    /**\r\n    * Count cells\r\n    * @param  {int} s   : openTime in parameter\r\n    * @param {int} e   : closeTime in parameter\r\n    * @param {int} d   : divTime in parameter\r\n    * @return {int} columns   : columns(cells) of Table\r\n    */\r\n    static countColumns(s,e,d){\r\n        return Math.ceil((e - s) / d);\r\n    }\r\n};\n\n//# sourceURL=webpack:///./modules/js/common/common.js?");
+
+/***/ }),
+
 /***/ "./modules/js/layout.js":
 /*!******************************!*\
   !*** ./modules/js/layout.js ***!
   \******************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("exports.default = class{\r\n    constructor(){\r\n        console.log(\"OK\");\r\n    }\r\n    log(a){\r\n        return a + 1;\r\n    }\r\n};\n\n//# sourceURL=webpack:///./modules/js/layout.js?");
+eval("let common = __webpack_require__(/*! ./common/common */ \"./modules/js/common/common.js\").default;\r\nexports.default = class{\r\n    constructor(){\r\n        console.log(\"OK\");\r\n        let ret = common.toDoubleDigits(5);\r\n        console.log(ret);\r\n    }\r\n    log(a){\r\n        return a + 1;\r\n    }\r\n};\n\n//# sourceURL=webpack:///./modules/js/layout.js?");
 
 /***/ }),
 
