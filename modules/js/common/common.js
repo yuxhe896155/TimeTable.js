@@ -21,10 +21,9 @@ exports.default = class{
     }
     /**
     * Convert time into integer
-    * @param  {string} time : Format should be "HH:MM".
-    * @example : time2Int("23:45")
-    * @return  {int}        : Time converted as minutes
-    * @example : 1425
+    * @param  time {string} Format should be "HH:MM".
+    * @return  {int} Time converted as minutes
+    * @example : time2Int("23:45") // 1425
     */
     static time2Int(time){
         // Hour
@@ -35,10 +34,9 @@ exports.default = class{
     }
     /**
     * convert time into integer
-    * @param  {int}   time : Time converted as minutes
-    * @example : int2Time(1425)
-    * @return  {string} returnTime : Format should be "HH:MM".
-    * @example : 23:45
+    * @param time {int} Time converted as minutes
+    * @return  {string} Time of "HH:MM" format
+    * @example : int2Time(1425) //"23:45"
     */
     static int2Time(time){
         // Hour
@@ -51,8 +49,8 @@ exports.default = class{
     }
     /**
     * Add 0 to number if it is only 1 digit
-    * @param  {int}    num : Number.
-    * @return {string} num : Number with 0.
+    * @param  num {int} Number.
+    * @return {string} Number with 0.
     */
     static toDoubleDigits(num) {
         num += "";
@@ -63,10 +61,10 @@ exports.default = class{
     }
     /**
     * Count cells
-    * @param  {int} s   : openTime in parameter
-    * @param {int} e   : closeTime in parameter
-    * @param {int} d   : divTime in parameter
-    * @return {int} columns   : columns(cells) of Table
+    * @param  s {int} openTime in parameter
+    * @param  e {int} closeTime in parameter
+    * @param  d {int} divTime in parameter
+    * @return {int} columns(cells) of Table
     */
     static countColumns(s,e,d){
         return Math.ceil((e - s) / d);
