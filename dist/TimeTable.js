@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/main.css */ \"./modules/css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_0__);\n// Use require in order to use in jest\r\nconst Validation = __webpack_require__(/*! ../modules/js/validation */ \"./modules/js/validation.js\").default;\r\n\r\n\r\n/**\r\n * First function to be called.\r\n * @method TimeTable\r\n * @param selector {string} id or class to set TimeTable[Necessary]\r\n * @param obj {obj} Setting of TimeTable[optional]\r\n * @return {object} Returns instance of TimeTable.<br>\r\n * If there was an error, returns undefined.\r\n */\r\nwindow.TimeTable = (selector, obj = {})=>{\r\n    let isCorrect = new Validation(selector, obj);\r\n}\r\n\r\n/**\r\n * @class\r\n */\r\nclass TimeTable{\r\n    /**\r\n     * OK\r\n     */\r\n    constructor(){\r\n        console.log(\"loaded\");\r\n    }\r\n}\n\n//# sourceURL=webpack:///./modules/TimeTable.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/main.css */ \"./modules/css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_0__);\n// Use require in order to use in jest\r\nconst validation = __webpack_require__(/*! ../modules/js/validation */ \"./modules/js/validation.js\").default;\r\n\r\n\r\n/**\r\n * First function to be called.\r\n * @method TimeTable\r\n * @param selector {string} id or class to set TimeTable[Necessary]\r\n * @param obj {obj} Setting of TimeTable[optional]\r\n * @return {object} Returns instance of TimeTable.<br>\r\n * If there was an error, returns undefined.\r\n */\r\nwindow.TimeTable = (selector = \"\", obj = {})=>{\r\n    let isOK = (validation.checkSelector(selector, obj))? true: false;\r\n    console.log(isOK);\r\n}\r\n\r\n/**\r\n * @class\r\n */\r\nclass TimeTable{\r\n    /**\r\n     * OK\r\n     */\r\n    constructor(){\r\n        console.log(\"loaded\");\r\n    }\r\n}\n\n//# sourceURL=webpack:///./modules/TimeTable.js?");
 
 /***/ }),
 
@@ -109,14 +109,25 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!./m
 
 /***/ }),
 
-/***/ "./modules/js/common/common.js":
-/*!*************************************!*\
-  !*** ./modules/js/common/common.js ***!
-  \*************************************/
+/***/ "./modules/js/common.js":
+/*!******************************!*\
+  !*** ./modules/js/common.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("class common{\r\n    static log(a){\r\n        return a + 1;\r\n    }\r\n}\r\nexports.default = common;\n\n//# sourceURL=webpack:///./modules/js/common/common.js?");
+eval("/**\r\n * Common functions(\"new\" is not required)\r\n * @class\r\n */\r\nlet common = {\r\n    /**\r\n     * Check data type\r\n     * @memberof common\r\n     * @param target {string|number|boolean|object} The value to check data type.\r\n     * @param type {string} Expected data type.\r\n     * @return {boolean} true: target data type and type are same. <br>\r\n     * false: target data type and type are different.\r\n     */\r\n    checkDataType: (target, type)=>{\r\n        let isOK = true;\r\n        if(typeof type !== \"string\")isOK = false;\r\n        if(typeof target !== type)isOK = false;\r\n        return isOK;\r\n    },\r\n    /**\r\n     * Show string in console\r\n     * @memberof common\r\n     * @param text {string} Text to show in console\r\n     * @return {boolean} true\r\n     */\r\n    console: (text = \"\")=>{\r\n        console.log(text);\r\n        return true;\r\n    },\r\n};\r\nexports.default = common;\n\n//# sourceURL=webpack:///./modules/js/common.js?");
+
+/***/ }),
+
+/***/ "./modules/js/msg.js":
+/*!***************************!*\
+  !*** ./modules/js/msg.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("/**\r\n * Messages uses in TimeTable.js(\"new\" is not required)\r\n * @class\r\n * @exmaple msg.common(\"checkDataType\", {p1: \"aa\", p2:\"bb\"}); //aa IS NOT bb\r\n */\r\nlet msg = {\r\n    /**\r\n     * Message of common.js\r\n     * @memberof msg\r\n     * @param text {string} The place make error occurs.\r\n     * @param param {object} Text dynamically changes.\r\n     * @return {string} Message\r\n     */\r\n    common: (text,param)=>{\r\n        msg = {\r\n            checkDataType: `${param.p1} IS NOT ${param.p2}`,\r\n        };\r\n        return msg[text];\r\n    },\r\n    /**\r\n     * Message of validation.js\r\n     * @memberof msg\r\n     * @param text {string} The place make error occurs or key\r\n     * @param param {object} Text dynamically changes.\r\n     * @return {string} Message\r\n     */\r\n    validation: (text,param)=>{\r\n        msg = {\r\n            selectorFirst: `[${param.p1}] FIRST CHARACTER HAS TOBE # or .`,\r\n            noElement:     `[${param.p1}] DOES NOT EXIST`,\r\n            moreElement:   `[${param.p1}] EXIST MORE THAN 1`,\r\n        };\r\n        return msg[text];\r\n    },\r\n\r\n};\r\nexports.default = msg;\n\n//# sourceURL=webpack:///./modules/js/msg.js?");
 
 /***/ }),
 
@@ -127,7 +138,7 @@ eval("class common{\r\n    static log(a){\r\n        return a + 1;\r\n    }\r\n}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("let common = __webpack_require__(/*! ./common/common */ \"./modules/js/common/common.js\").default;\r\nclass validation{\r\n    constructor(){\r\n        console.log(\"OK\");\r\n    }\r\n    log(a){\r\n        return a + 1;\r\n    }\r\n}\r\nexports.default = validation;\n\n//# sourceURL=webpack:///./modules/js/validation.js?");
+eval("let common = __webpack_require__(/*! ./common */ \"./modules/js/common.js\").default;\r\nlet msg    = __webpack_require__(/*! ./msg */ \"./modules/js/msg.js\").default;\r\n/**\r\n * Validates initial parameter set by library user.(\"new\" is not required)\r\n * @class\r\n */\r\nlet validation = {\r\n    /** \r\n     * Status of checking parameter.\r\n     * @memberof validation\r\n     * @param selector {string} id or class to set TimeTable\r\n     * @return {boolean}\r\n     */\r\n    checkSelector: (selector) =>{\r\n        let isOK = true;\r\n        let isId = true;\r\n        try{\r\n            if(!common.checkDataType(selector,\"string\")){\r\n                throw msg.common(\"checkDataType\",{p1: selector, p2: \"string\"});\r\n            }\r\n            // Check whether string is id or clas\r\n            if(!(selector.substring(0,1) === \"#\" || selector.substring(0,1) === \".\")){\r\n                throw msg.validation(\"selectorFirst\",{p1: selector});\r\n            }else{\r\n                isId = (selector.substring(0,1) === \"#\")? true: false;\r\n            }\r\n            // Check existance\r\n            if(isId){\r\n                if(!document.getElementById(selector.substring(1))){\r\n                    throw msg.validation(\"noElement\",{p1: selector});\r\n                }\r\n            }else{\r\n                let el = document.getElementsByClassName(selector.substring(1));\r\n                if(el.length === 0)throw msg.validation(\"noElement\",{p1: selector});\r\n                if(el.length > 1)throw msg.validation(\"moreElement\",{p1: selector});\r\n            }\r\n        }catch(e){\r\n            common.console(`validation -> checkSelector: ${e}`);\r\n            isOK = false;\r\n        }\r\n        return isOK;\r\n    },\r\n};\r\nexports.default = validation;\n\n//# sourceURL=webpack:///./modules/js/validation.js?");
 
 /***/ }),
 

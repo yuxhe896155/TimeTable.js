@@ -1,5 +1,5 @@
 // Use require in order to use in jest
-const Validation = require("../modules/js/validation").default;
+const validation = require("../modules/js/validation").default;
 import "./css/main.css";
 
 /**
@@ -10,8 +10,9 @@ import "./css/main.css";
  * @return {object} Returns instance of TimeTable.<br>
  * If there was an error, returns undefined.
  */
-window.TimeTable = (selector, obj = {})=>{
-    let isCorrect = new Validation(selector, obj);
+window.TimeTable = (selector = "", obj = {})=>{
+    let isOK = (validation.checkSelector(selector, obj))? true: false;
+    console.log(isOK);
 }
 
 /**
