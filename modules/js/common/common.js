@@ -1,7 +1,6 @@
-/** 
- * @class common
- */
-
-exports.default = class{
-
-};
+class common{
+    static log(a){
+        return a + 1;
+    }
+}
+exports.default = common;

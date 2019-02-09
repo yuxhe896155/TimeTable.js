@@ -3,7 +3,7 @@ file.vueMin = "./TimeTable_with_vue.min.js";      //Library with Vuejs, no Bulma
 file.noneMin = "./TimeTable_simple.min.js";       //Simple Library(Minified)
 
 let entry = {};
-entry.entry = "./modules/app.js";
+entry.entry = "./modules/TimeTable.js";
 
 let resolve = {
     resolve: {
@@ -22,7 +22,7 @@ let modules = {
 };
 
 module.exports = {
-    entry: "./modules/app.js",
+    entry: "./modules/TimeTable.js",
     mode: "development",
     output: {
         filename: "./TimeTable.js"

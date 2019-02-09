@@ -30,6 +30,7 @@ gulp.task("bs-reload", ["webpack"], ()=> {
 
 // watch file update
 gulp.task("default", ["browser-sync"], ()=>{
-    gulp.watch("./modules/**/*", ["bs-reload"]);
+    gulp.watch("./modules/**", ["bs-reload"]);
     gulp.watch("./*.html",   ["bs-reload"]);
+    gulp.watch("./*.js",   ["bs-reload"]);
 });

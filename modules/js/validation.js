@@ -1,5 +1,5 @@
 let common = require("./common/common").default;
-class layout{
+class validation{
     constructor(){
         console.log("OK");
     }
@@ -7,4 +7,4 @@ class layout{
         return a + 1;
     }
 }
-exports.default = layout;
+exports.default = validation;
