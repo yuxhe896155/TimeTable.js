@@ -6,7 +6,7 @@ let msg    = require("./msg").default;
  */
 let validation = {
     /** 
-     * Status of checking parameter.
+     * Check whether selector has an error.
      * @memberof validation
      * @param selector {string} id or class to set TimeTable
      * @return {boolean}
@@ -40,5 +40,30 @@ let validation = {
         }
         return isOK;
     },
+    /** 
+     * Check whether object has an error.
+     * @memberof validation
+     * @param obj {object} Setting of TimeTable
+     * @return {boolean}
+     */
+    checkObject: (obj) =>{
+        if(!validation.checkTime(obj))return false;
+
+    },
+    /** 
+     * Check time.
+     * @memberof validation
+     * @param obj {object} Setting of TimeTable
+     * @return {boolean}
+     */
+    checkTime: (obj)=>{
+        let isOK = true;
+        if(obj.startTime){
+            let time = obj.startTime;
+        } 
+        return isOK;
+    },
 };
 exports.default = validation;
+
+validation.checkTime({});

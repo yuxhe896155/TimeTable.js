@@ -11,7 +11,8 @@ import "./css/main.css";
  * If there was an error, returns undefined.
  */
 window.TimeTable = (selector = "", obj = {})=>{
-    let isOK = (validation.checkSelector(selector, obj))? true: false;
+    let isOK = (validation.checkSelector(selector))? true: false;
+    validation.checkObject(obj);
     console.log(isOK);
 }
 

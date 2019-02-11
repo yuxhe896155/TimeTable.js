@@ -1,3 +1,5 @@
+
+let msg    = require("./msg").default;
 /**
  * Common functions("new" is not required)
  * @class
@@ -26,6 +28,25 @@ let common = {
     console: (text = "")=>{
         console.log(text);
         return true;
+    },
+    /**
+     * Check parameter is time or not
+     * @memberof common
+     * @param time {string} Format should be (HH:SS)
+     * @return {boolean} true
+     */
+    isTime: (time)=>{
+        let isOK = true;
+        try{
+            if(!common.checkDataType(time, "string")){
+                throw msg.common("checkDataType",{p1: time, p2: "string"});
+            }
+            if(!)
+        }catch(e){
+            common.console(`common -> isTime: ${e}`);
+            isOK = false;
+        }
+        return isOK;
     },
 };
 exports.default = common;
