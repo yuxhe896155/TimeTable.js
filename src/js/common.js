@@ -6,7 +6,7 @@ export default {    /**
     * @return  {int} oTime : Opening time converted as minutes
     * {int} cTime   : Closing time converted as minutes
     */
-    twoTime2Int =  function(time){
+    twoTime2Int: function(time){
         // Starting Time
         let oTime = this.time2Int(time.substring(0,5));
         // Ending Time
@@ -25,7 +25,7 @@ export default {    /**
     * @return  {int}        : Time converted as minutes
     * @example : 1425
     */
-    time2Int = function(time){
+    time2Int: function(time){
         // Hour
         const h = time.substring(0,2);
         // Minute
@@ -39,7 +39,7 @@ export default {    /**
     * @return  {string} returnTime : Format should be "HH:MM".
     * @example : 23:45
     */
-    int2Time = function(time){
+    int2Time: function(time){
         // Hour
         let h = Math.floor(time / 60);
         if(h >= 24)h -= 24;
@@ -53,11 +53,72 @@ export default {    /**
     * @param  {int}    num : Number.
     * @return {string} num : Number with 0.
     */
-    toDoubleDigits(num) {
+    toDoubleDigits: function(num) {
         num += "";
         if (num.length === 1) {
             num = "0" + num;
         }
         return num;
     },
+    /**
+    * 第1引数を対象にし、第2引数のキーが見つかるまでループ。
+    * 第1引数のobjを昇順の配列にして返す。
+    * かなり適当
+    * シフトが入っていない人は後ろの配列にくる
+    */
+    orderByShift: function(obj){
+        // id, startTimeの連想配列を作成
+        this.tmpArr = [];
+        let times = [];
+        // シフトがまだの人の配列
+        let noTimes = [];
+        let ret = [];
+        for(let key in obj){
+            let t = obj[key].planWork;
+            if(t === ""){
+                let t = {};
+                t[key] = obj[key];
+                noTimes.push(t);
+            }else{
+                times.push(t);
+            }
+        }
+        noTimes.sort();
+        times.sort();
+        console.log(times);
+        for(let i in times){
+            for(let key in obj){
+                if(obj[key].planWork === times[i]){
+                    let t = {};
+                    t[key] = obj[key];
+                    ret.push(t);
+                }
+            }
+        }
+        return ret.concat(noTimes);
+    },
+    /**
+    * 第1引数を対象にし、第2引数のキーが見つかるまでループ。
+    * 第2引数に対応する値を配列にして
+    * ※事前にthis.tmpArrを空にする必要あり
+    */
+    findJsonKey: function(obj, target){
+        for (var key in obj){
+            if(key === target)this.tmpArr.push(obj[key]);
+            if (typeof obj[key] == "object") {
+                if(Array.isArray(obj[key])) {
+                    // 配列の場合は forEach で要素ごとにに再帰呼び出し
+                    obj[key].forEach(function(item){
+                        this.findJsonKey(item, target) ;
+                    });
+                }else{
+                    // 連想配列はそのまま再帰呼び出し
+                    this.findJsonKey(obj[key], target) ;
+                }  
+            }
+        }
+    },
+    debug: function(str){
+        $("#debug").append(str);
+    }
 }
