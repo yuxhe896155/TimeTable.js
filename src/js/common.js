@@ -67,8 +67,6 @@ export default {    /**
     * シフトが入っていない人は後ろの配列にくる
     */
     orderByShift: function(obj){
-        // id, startTimeの連想配列を作成
-        this.tmpArr = [];
         let times = [];
         // シフトがまだの人の配列
         let noTimes = [];
@@ -85,9 +83,10 @@ export default {    /**
         }
         noTimes.sort();
         times.sort();
-        console.log(times);
         for(let i in times){
+            console.log(i);
             for(let key in obj){
+                console.log(Object.keys(obj).length);
                 if(obj[key].planWork === times[i]){
                     let t = {};
                     t[key] = obj[key];
@@ -95,7 +94,8 @@ export default {    /**
                 }
             }
         }
-        return ret.concat(noTimes);
+        ret = ret.concat(noTimes);
+        return ret;
     },
     /**
     * 第1引数を対象にし、第2引数のキーが見つかるまでループ。

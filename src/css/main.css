@@ -8,23 +8,58 @@
     --nameWidth: 200px;
     --height: 50px;
     --perColumn: calc((100% - var(--nameWidth)) / var(--columns));
+    --win : 100%;
     width: 100%;
     overflow-x: hidden;
     cursor: default;
 }
-.tt-header > div{
+.tt-header{
+    height: 30px;
+}
+/* 名前 */
+.tt-header > div:first-child{
     border: 1px solid var(--borderColor);
     border-right: 0;
     float: left;
-    height: 20px;
+    height: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 30px;
     white-space: nowrap;
     width: calc(var(--perColumn) - 2px);
     text-align: center;
 }
-.tt-header > div:last-child{
+.tt-header_time{
+    border: 1px solid var(--borderColor);
+    border-right: 0;
+    float: left;
+    height: 100%;
+    width: calc(var(--perColumn) * (var(--columns) - 1) - 1px * var(--columns));
+    text-align: center;
+}
+.tt-header_time > div{
     border-right: 1px solid var(--borderColor);
+    float: left;
+    overflow: hidden;
+    height: 100%;
+    text-overflow: ellipsis;
+    line-height: 30px;
+    white-space: nowrap;
+    width: calc(100% / (var(--columns) - 1) - 1px);
+}
+
+/* 合計 */
+.tt-header > div:last-child{
+    border: 1px solid var(--borderColor);
+    border-left: 0;
+    width: calc(var(--perColumn) - 2px);
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* 名前 */
@@ -33,6 +68,7 @@
 }
 .tt-row{
     clear: both;
+    height: var(--height);
 }
 .tt-row > div:first-child{
     border: 1px solid var(--borderColor);
@@ -40,7 +76,7 @@
     border-top: none;
     float: left;
     height: var(--height);
-    width: calc(var(--nameWidth) + 1px);
+    width: var(--nameWidth);
     text-align: center;
     line-height: var(--height);
     overflow: hidden;
@@ -53,13 +89,15 @@
 .tt-row_data{
     float: left;
     height: var(--height);
-    outline: 1px solid var(--borderColor);
+    border: 1px solid var(--borderColor);
+    border-top: 0;
+    border-right: 0;
     width: calc(var(--perColumn) * (var(--columns) - 1) - 1px * var(--columns));
 }
-
 .tt-row > div:last-child{
     border: 1px solid var(--borderColor);
     border-top: 0;
+    border-left: 0;
     width: calc(var(--perColumn) - 2px);
     height: var(--height);
     float: left;
@@ -68,4 +106,32 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+/* さらに細かい1行 */
+.tt-row_data > div{
+    height: calc(var(--height) / 5);
+}
+/* 空行 */
+.tt-row_space{
+    float: left;
+    height: calc(var(--height) / 5);
+    border-right: 1px solid var(--borderColor);
+    width: calc(100% / (var(--columns) - 1) - 1px);
+}
+.shift{
+    height: 100%;
+    float: left;
+    width: calc(100% / 4);
+}
+.planWork{
+    background: rgba(153, 207, 229, 0.7);
+}
+.planRest{
+    background: rgba(246,213,128, 0.7);
+}
+.realWork{
+    background: rgba(75, 117, 185, 1.0);
+}
+.realRest{
+    background: rgba(240, 186, 50,1.0);
 }

@@ -93,7 +93,11 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"@char-set \\\"utf-8\\\";\\r\\n\\r\\n\\r\\n#timetable{\\r\\n    --columns: 10;\\r\\n    --columnsPx: 3;\\r\\n    --borderColor: rgb(150,150,150);\\r\\n    --nameWidth: 200px;\\r\\n    --height: 50px;\\r\\n    --perColumn: calc((100% - var(--nameWidth)) / var(--columns));\\r\\n    width: 100%;\\r\\n    overflow-x: hidden;\\r\\n    cursor: default;\\r\\n}\\r\\n.tt-header > div{\\r\\n    border: 1px solid var(--borderColor);\\r\\n    border-right: 0;\\r\\n    float: left;\\r\\n    height: 20px;\\r\\n    overflow: hidden;\\r\\n    text-overflow: ellipsis;\\r\\n    white-space: nowrap;\\r\\n    width: calc(var(--perColumn) - 2px);\\r\\n    text-align: center;\\r\\n}\\r\\n.tt-header > div:last-child{\\r\\n    border-right: 1px solid var(--borderColor);\\r\\n}\\r\\n\\r\\n/* 名前 */\\r\\n.tt-header > div:first-child{\\r\\n    width: var(--nameWidth);\\r\\n}\\r\\n.tt-row{\\r\\n    clear: both;\\r\\n}\\r\\n.tt-row > div:first-child{\\r\\n    border: 1px solid var(--borderColor);\\r\\n    border-right: none;\\r\\n    border-top: none;\\r\\n    float: left;\\r\\n    height: var(--height);\\r\\n    width: calc(var(--nameWidth) + 1px);\\r\\n    text-align: center;\\r\\n    line-height: var(--height);\\r\\n    overflow: hidden;\\r\\n    text-overflow: ellipsis;\\r\\n    white-space: nowrap;\\r\\n}\\r\\n\\r\\n\\r\\n/* 1行 */\\r\\n.tt-row_data{\\r\\n    float: left;\\r\\n    height: var(--height);\\r\\n    outline: 1px solid var(--borderColor);\\r\\n    width: calc(var(--perColumn) * (var(--columns) - 1) - 1px * var(--columns));\\r\\n}\\r\\n\\r\\n.tt-row > div:last-child{\\r\\n    border: 1px solid var(--borderColor);\\r\\n    border-top: 0;\\r\\n    width: calc(var(--perColumn) - 2px);\\r\\n    height: var(--height);\\r\\n    float: left;\\r\\n    text-align: center;\\r\\n    line-height: var(--height);\\r\\n    overflow: hidden;\\r\\n    text-overflow: ellipsis;\\r\\n    white-space: nowrap;\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/css/main.css?./node_modules/css-loader/dist/cjs.js");
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "@char-set \"utf-8\";\r\n\r\n\r\n#timetable{\r\n    --columns: 10;\r\n    --columnsPx: 3;\r\n    --borderColor: rgb(150,150,150);\r\n    --nameWidth: 200px;\r\n    --height: 50px;\r\n    --perColumn: calc((100% - var(--nameWidth)) / var(--columns));\r\n    --win : 100%;\r\n    width: 100%;\r\n    overflow-x: hidden;\r\n    cursor: default;\r\n}\r\n.tt-header{\r\n    height: 30px;\r\n}\r\n/* 名前 */\r\n.tt-header > div:first-child{\r\n    border: 1px solid var(--borderColor);\r\n    border-right: 0;\r\n    float: left;\r\n    height: 100%;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    line-height: 30px;\r\n    white-space: nowrap;\r\n    width: calc(var(--perColumn) - 2px);\r\n    text-align: center;\r\n}\r\n.tt-header_time{\r\n    border: 1px solid var(--borderColor);\r\n    border-right: 0;\r\n    float: left;\r\n    height: 100%;\r\n    width: calc(var(--perColumn) * (var(--columns) - 1) - 1px * var(--columns));\r\n    text-align: center;\r\n}\r\n.tt-header_time > div{\r\n    border-right: 1px solid var(--borderColor);\r\n    float: left;\r\n    overflow: hidden;\r\n    height: 100%;\r\n    text-overflow: ellipsis;\r\n    line-height: 30px;\r\n    white-space: nowrap;\r\n    width: calc(100% / (var(--columns) - 1) - 1px);\r\n}\r\n\r\n/* 合計 */\r\n.tt-header > div:last-child{\r\n    border: 1px solid var(--borderColor);\r\n    border-left: 0;\r\n    width: calc(var(--perColumn) - 2px);\r\n    height: 100%;\r\n    float: left;\r\n    text-align: center;\r\n    line-height: 30px;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\r\n}\r\n\r\n/* 名前 */\r\n.tt-header > div:first-child{\r\n    width: var(--nameWidth);\r\n}\r\n.tt-row{\r\n    clear: both;\r\n    height: var(--height);\r\n}\r\n.tt-row > div:first-child{\r\n    border: 1px solid var(--borderColor);\r\n    border-right: none;\r\n    border-top: none;\r\n    float: left;\r\n    height: var(--height);\r\n    width: var(--nameWidth);\r\n    text-align: center;\r\n    line-height: var(--height);\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\r\n}\r\n\r\n\r\n/* 1行 */\r\n.tt-row_data{\r\n    float: left;\r\n    height: var(--height);\r\n    border: 1px solid var(--borderColor);\r\n    border-top: 0;\r\n    border-right: 0;\r\n    width: calc(var(--perColumn) * (var(--columns) - 1) - 1px * var(--columns));\r\n}\r\n.tt-row > div:last-child{\r\n    border: 1px solid var(--borderColor);\r\n    border-top: 0;\r\n    border-left: 0;\r\n    width: calc(var(--perColumn) - 2px);\r\n    height: var(--height);\r\n    float: left;\r\n    text-align: center;\r\n    line-height: var(--height);\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\r\n}\r\n/* さらに細かい1行 */\r\n.tt-row_data > div{\r\n    height: calc(var(--height) / 5);\r\n}\r\n/* 空行 */\r\n.tt-row_space{\r\n    float: left;\r\n    height: calc(var(--height) / 5);\r\n    border-right: 1px solid var(--borderColor);\r\n    width: calc(100% / (var(--columns) - 1) - 1px);\r\n}\r\n.shift{\r\n    height: 100%;\r\n    float: left;\r\n    width: calc(100% / 4);\r\n}\r\n.planWork{\r\n    background: rgba(153, 207, 229, 0.7);\r\n}\r\n.planRest{\r\n    background: rgba(246,213,128, 0.7);\r\n}\r\n.realWork{\r\n    background: rgba(75, 117, 185, 1.0);\r\n}\r\n.realRest{\r\n    background: rgba(240, 186, 50,1.0);\r\n}", ""]);
+
+
 
 /***/ }),
 
@@ -105,7 +109,91 @@ eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return '@media ' + item[2] + '{' + content + '}';\n      } else {\n        return content;\n      }\n    }).join('');\n  }; // import a list of modules into the list\n\n\n  list.i = function (modules, mediaQuery) {\n    if (typeof modules === 'string') {\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    for (var i = 0; i < this.length; i++) {\n      var id = this[i][0];\n\n      if (id != null) {\n        alreadyImportedModules[id] = true;\n      }\n    }\n\n    for (i = 0; i < modules.length; i++) {\n      var item = modules[i]; // skip already imported module\n      // this implementation is not 100% perfect for weird media query combinations\n      // when a module is imported multiple times with different media queries.\n      // I hope this will never occur (Hey this way we have smaller bundles)\n\n      if (item[0] == null || !alreadyImportedModules[item[0]]) {\n        if (mediaQuery && !item[2]) {\n          item[2] = mediaQuery;\n        } else if (mediaQuery) {\n          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';\n        }\n\n        list.push(item);\n      }\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || '';\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n  return '/*# ' + data + ' */';\n}\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/api.js?");
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function (useSourceMap) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
+
+      if (item[2]) {
+        return '@media ' + item[2] + '{' + content + '}';
+      } else {
+        return content;
+      }
+    }).join('');
+  }; // import a list of modules into the list
+
+
+  list.i = function (modules, mediaQuery) {
+    if (typeof modules === 'string') {
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    for (var i = 0; i < this.length; i++) {
+      var id = this[i][0];
+
+      if (id != null) {
+        alreadyImportedModules[id] = true;
+      }
+    }
+
+    for (i = 0; i < modules.length; i++) {
+      var item = modules[i]; // skip already imported module
+      // this implementation is not 100% perfect for weird media query combinations
+      // when a module is imported multiple times with different media queries.
+      // I hope this will never occur (Hey this way we have smaller bundles)
+
+      if (item[0] == null || !alreadyImportedModules[item[0]]) {
+        if (mediaQuery && !item[2]) {
+          item[2] = mediaQuery;
+        } else if (mediaQuery) {
+          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';
+        }
+
+        list.push(item);
+      }
+    }
+  };
+
+  return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+  var content = item[1] || '';
+  var cssMapping = item[3];
+
+  if (!cssMapping) {
+    return content;
+  }
+
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
+
+  return [content].join('\n');
+} // Adapted from convert-source-map (MIT)
+
+
+function toComment(sourceMap) {
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+  return '/*# ' + data + ' */';
+}
 
 /***/ }),
 
@@ -116,7 +204,405 @@ eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n\nvar stylesInDom = {};\n\nvar\tmemoize = function (fn) {\n\tvar memo;\n\n\treturn function () {\n\t\tif (typeof memo === \"undefined\") memo = fn.apply(this, arguments);\n\t\treturn memo;\n\t};\n};\n\nvar isOldIE = memoize(function () {\n\t// Test for IE <= 9 as proposed by Browserhacks\n\t// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805\n\t// Tests for existence of standard globals is to allow style-loader\n\t// to operate correctly into non-standard environments\n\t// @see https://github.com/webpack-contrib/style-loader/issues/177\n\treturn window && document && document.all && !window.atob;\n});\n\nvar getTarget = function (target, parent) {\n  if (parent){\n    return parent.querySelector(target);\n  }\n  return document.querySelector(target);\n};\n\nvar getElement = (function (fn) {\n\tvar memo = {};\n\n\treturn function(target, parent) {\n                // If passing function in options, then use it for resolve \"head\" element.\n                // Useful for Shadow Root style i.e\n                // {\n                //   insertInto: function () { return document.querySelector(\"#foo\").shadowRoot }\n                // }\n                if (typeof target === 'function') {\n                        return target();\n                }\n                if (typeof memo[target] === \"undefined\") {\n\t\t\tvar styleTarget = getTarget.call(this, target, parent);\n\t\t\t// Special case to return head of iframe instead of iframe itself\n\t\t\tif (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {\n\t\t\t\ttry {\n\t\t\t\t\t// This will throw an exception if access to iframe is blocked\n\t\t\t\t\t// due to cross-origin restrictions\n\t\t\t\t\tstyleTarget = styleTarget.contentDocument.head;\n\t\t\t\t} catch(e) {\n\t\t\t\t\tstyleTarget = null;\n\t\t\t\t}\n\t\t\t}\n\t\t\tmemo[target] = styleTarget;\n\t\t}\n\t\treturn memo[target]\n\t};\n})();\n\nvar singleton = null;\nvar\tsingletonCounter = 0;\nvar\tstylesInsertedAtTop = [];\n\nvar\tfixUrls = __webpack_require__(/*! ./urls */ \"./node_modules/style-loader/lib/urls.js\");\n\nmodule.exports = function(list, options) {\n\tif (typeof DEBUG !== \"undefined\" && DEBUG) {\n\t\tif (typeof document !== \"object\") throw new Error(\"The style-loader cannot be used in a non-browser environment\");\n\t}\n\n\toptions = options || {};\n\n\toptions.attrs = typeof options.attrs === \"object\" ? options.attrs : {};\n\n\t// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>\n\t// tags it will allow on a page\n\tif (!options.singleton && typeof options.singleton !== \"boolean\") options.singleton = isOldIE();\n\n\t// By default, add <style> tags to the <head> element\n        if (!options.insertInto) options.insertInto = \"head\";\n\n\t// By default, add <style> tags to the bottom of the target\n\tif (!options.insertAt) options.insertAt = \"bottom\";\n\n\tvar styles = listToStyles(list, options);\n\n\taddStylesToDom(styles, options);\n\n\treturn function update (newList) {\n\t\tvar mayRemove = [];\n\n\t\tfor (var i = 0; i < styles.length; i++) {\n\t\t\tvar item = styles[i];\n\t\t\tvar domStyle = stylesInDom[item.id];\n\n\t\t\tdomStyle.refs--;\n\t\t\tmayRemove.push(domStyle);\n\t\t}\n\n\t\tif(newList) {\n\t\t\tvar newStyles = listToStyles(newList, options);\n\t\t\taddStylesToDom(newStyles, options);\n\t\t}\n\n\t\tfor (var i = 0; i < mayRemove.length; i++) {\n\t\t\tvar domStyle = mayRemove[i];\n\n\t\t\tif(domStyle.refs === 0) {\n\t\t\t\tfor (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();\n\n\t\t\t\tdelete stylesInDom[domStyle.id];\n\t\t\t}\n\t\t}\n\t};\n};\n\nfunction addStylesToDom (styles, options) {\n\tfor (var i = 0; i < styles.length; i++) {\n\t\tvar item = styles[i];\n\t\tvar domStyle = stylesInDom[item.id];\n\n\t\tif(domStyle) {\n\t\t\tdomStyle.refs++;\n\n\t\t\tfor(var j = 0; j < domStyle.parts.length; j++) {\n\t\t\t\tdomStyle.parts[j](item.parts[j]);\n\t\t\t}\n\n\t\t\tfor(; j < item.parts.length; j++) {\n\t\t\t\tdomStyle.parts.push(addStyle(item.parts[j], options));\n\t\t\t}\n\t\t} else {\n\t\t\tvar parts = [];\n\n\t\t\tfor(var j = 0; j < item.parts.length; j++) {\n\t\t\t\tparts.push(addStyle(item.parts[j], options));\n\t\t\t}\n\n\t\t\tstylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};\n\t\t}\n\t}\n}\n\nfunction listToStyles (list, options) {\n\tvar styles = [];\n\tvar newStyles = {};\n\n\tfor (var i = 0; i < list.length; i++) {\n\t\tvar item = list[i];\n\t\tvar id = options.base ? item[0] + options.base : item[0];\n\t\tvar css = item[1];\n\t\tvar media = item[2];\n\t\tvar sourceMap = item[3];\n\t\tvar part = {css: css, media: media, sourceMap: sourceMap};\n\n\t\tif(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});\n\t\telse newStyles[id].parts.push(part);\n\t}\n\n\treturn styles;\n}\n\nfunction insertStyleElement (options, style) {\n\tvar target = getElement(options.insertInto)\n\n\tif (!target) {\n\t\tthrow new Error(\"Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.\");\n\t}\n\n\tvar lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];\n\n\tif (options.insertAt === \"top\") {\n\t\tif (!lastStyleElementInsertedAtTop) {\n\t\t\ttarget.insertBefore(style, target.firstChild);\n\t\t} else if (lastStyleElementInsertedAtTop.nextSibling) {\n\t\t\ttarget.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);\n\t\t} else {\n\t\t\ttarget.appendChild(style);\n\t\t}\n\t\tstylesInsertedAtTop.push(style);\n\t} else if (options.insertAt === \"bottom\") {\n\t\ttarget.appendChild(style);\n\t} else if (typeof options.insertAt === \"object\" && options.insertAt.before) {\n\t\tvar nextSibling = getElement(options.insertAt.before, target);\n\t\ttarget.insertBefore(style, nextSibling);\n\t} else {\n\t\tthrow new Error(\"[Style Loader]\\n\\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\\n Must be 'top', 'bottom', or Object.\\n (https://github.com/webpack-contrib/style-loader#insertat)\\n\");\n\t}\n}\n\nfunction removeStyleElement (style) {\n\tif (style.parentNode === null) return false;\n\tstyle.parentNode.removeChild(style);\n\n\tvar idx = stylesInsertedAtTop.indexOf(style);\n\tif(idx >= 0) {\n\t\tstylesInsertedAtTop.splice(idx, 1);\n\t}\n}\n\nfunction createStyleElement (options) {\n\tvar style = document.createElement(\"style\");\n\n\tif(options.attrs.type === undefined) {\n\t\toptions.attrs.type = \"text/css\";\n\t}\n\n\tif(options.attrs.nonce === undefined) {\n\t\tvar nonce = getNonce();\n\t\tif (nonce) {\n\t\t\toptions.attrs.nonce = nonce;\n\t\t}\n\t}\n\n\taddAttrs(style, options.attrs);\n\tinsertStyleElement(options, style);\n\n\treturn style;\n}\n\nfunction createLinkElement (options) {\n\tvar link = document.createElement(\"link\");\n\n\tif(options.attrs.type === undefined) {\n\t\toptions.attrs.type = \"text/css\";\n\t}\n\toptions.attrs.rel = \"stylesheet\";\n\n\taddAttrs(link, options.attrs);\n\tinsertStyleElement(options, link);\n\n\treturn link;\n}\n\nfunction addAttrs (el, attrs) {\n\tObject.keys(attrs).forEach(function (key) {\n\t\tel.setAttribute(key, attrs[key]);\n\t});\n}\n\nfunction getNonce() {\n\tif (false) {}\n\n\treturn __webpack_require__.nc;\n}\n\nfunction addStyle (obj, options) {\n\tvar style, update, remove, result;\n\n\t// If a transform function was defined, run it on the css\n\tif (options.transform && obj.css) {\n\t    result = typeof options.transform === 'function'\n\t\t ? options.transform(obj.css) \n\t\t : options.transform.default(obj.css);\n\n\t    if (result) {\n\t    \t// If transform returns a value, use that instead of the original css.\n\t    \t// This allows running runtime transformations on the css.\n\t    \tobj.css = result;\n\t    } else {\n\t    \t// If the transform function returns a falsy value, don't add this css.\n\t    \t// This allows conditional loading of css\n\t    \treturn function() {\n\t    \t\t// noop\n\t    \t};\n\t    }\n\t}\n\n\tif (options.singleton) {\n\t\tvar styleIndex = singletonCounter++;\n\n\t\tstyle = singleton || (singleton = createStyleElement(options));\n\n\t\tupdate = applyToSingletonTag.bind(null, style, styleIndex, false);\n\t\tremove = applyToSingletonTag.bind(null, style, styleIndex, true);\n\n\t} else if (\n\t\tobj.sourceMap &&\n\t\ttypeof URL === \"function\" &&\n\t\ttypeof URL.createObjectURL === \"function\" &&\n\t\ttypeof URL.revokeObjectURL === \"function\" &&\n\t\ttypeof Blob === \"function\" &&\n\t\ttypeof btoa === \"function\"\n\t) {\n\t\tstyle = createLinkElement(options);\n\t\tupdate = updateLink.bind(null, style, options);\n\t\tremove = function () {\n\t\t\tremoveStyleElement(style);\n\n\t\t\tif(style.href) URL.revokeObjectURL(style.href);\n\t\t};\n\t} else {\n\t\tstyle = createStyleElement(options);\n\t\tupdate = applyToTag.bind(null, style);\n\t\tremove = function () {\n\t\t\tremoveStyleElement(style);\n\t\t};\n\t}\n\n\tupdate(obj);\n\n\treturn function updateStyle (newObj) {\n\t\tif (newObj) {\n\t\t\tif (\n\t\t\t\tnewObj.css === obj.css &&\n\t\t\t\tnewObj.media === obj.media &&\n\t\t\t\tnewObj.sourceMap === obj.sourceMap\n\t\t\t) {\n\t\t\t\treturn;\n\t\t\t}\n\n\t\t\tupdate(obj = newObj);\n\t\t} else {\n\t\t\tremove();\n\t\t}\n\t};\n}\n\nvar replaceText = (function () {\n\tvar textStore = [];\n\n\treturn function (index, replacement) {\n\t\ttextStore[index] = replacement;\n\n\t\treturn textStore.filter(Boolean).join('\\n');\n\t};\n})();\n\nfunction applyToSingletonTag (style, index, remove, obj) {\n\tvar css = remove ? \"\" : obj.css;\n\n\tif (style.styleSheet) {\n\t\tstyle.styleSheet.cssText = replaceText(index, css);\n\t} else {\n\t\tvar cssNode = document.createTextNode(css);\n\t\tvar childNodes = style.childNodes;\n\n\t\tif (childNodes[index]) style.removeChild(childNodes[index]);\n\n\t\tif (childNodes.length) {\n\t\t\tstyle.insertBefore(cssNode, childNodes[index]);\n\t\t} else {\n\t\t\tstyle.appendChild(cssNode);\n\t\t}\n\t}\n}\n\nfunction applyToTag (style, obj) {\n\tvar css = obj.css;\n\tvar media = obj.media;\n\n\tif(media) {\n\t\tstyle.setAttribute(\"media\", media)\n\t}\n\n\tif(style.styleSheet) {\n\t\tstyle.styleSheet.cssText = css;\n\t} else {\n\t\twhile(style.firstChild) {\n\t\t\tstyle.removeChild(style.firstChild);\n\t\t}\n\n\t\tstyle.appendChild(document.createTextNode(css));\n\t}\n}\n\nfunction updateLink (link, options, obj) {\n\tvar css = obj.css;\n\tvar sourceMap = obj.sourceMap;\n\n\t/*\n\t\tIf convertToAbsoluteUrls isn't defined, but sourcemaps are enabled\n\t\tand there is no publicPath defined then lets turn convertToAbsoluteUrls\n\t\ton by default.  Otherwise default to the convertToAbsoluteUrls option\n\t\tdirectly\n\t*/\n\tvar autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;\n\n\tif (options.convertToAbsoluteUrls || autoFixUrls) {\n\t\tcss = fixUrls(css);\n\t}\n\n\tif (sourceMap) {\n\t\t// http://stackoverflow.com/a/26603875\n\t\tcss += \"\\n/*# sourceMappingURL=data:application/json;base64,\" + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + \" */\";\n\t}\n\n\tvar blob = new Blob([css], { type: \"text/css\" });\n\n\tvar oldSrc = link.href;\n\n\tlink.href = URL.createObjectURL(blob);\n\n\tif(oldSrc) URL.revokeObjectURL(oldSrc);\n}\n\n\n//# sourceURL=webpack:///./node_modules/style-loader/lib/addStyles.js?");
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getTarget = function (target, parent) {
+  if (parent){
+    return parent.querySelector(target);
+  }
+  return document.querySelector(target);
+};
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(target, parent) {
+                // If passing function in options, then use it for resolve "head" element.
+                // Useful for Shadow Root style i.e
+                // {
+                //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
+                // }
+                if (typeof target === 'function') {
+                        return target();
+                }
+                if (typeof memo[target] === "undefined") {
+			var styleTarget = getTarget.call(this, target, parent);
+			// Special case to return head of iframe instead of iframe itself
+			if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+				try {
+					// This will throw an exception if access to iframe is blocked
+					// due to cross-origin restrictions
+					styleTarget = styleTarget.contentDocument.head;
+				} catch(e) {
+					styleTarget = null;
+				}
+			}
+			memo[target] = styleTarget;
+		}
+		return memo[target]
+	};
+})();
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(/*! ./urls */ "./node_modules/style-loader/lib/urls.js");
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+        if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
+		var nextSibling = getElement(options.insertAt.before, target);
+		target.insertBefore(style, nextSibling);
+	} else {
+		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+
+	if(options.attrs.nonce === undefined) {
+		var nonce = getNonce();
+		if (nonce) {
+			options.attrs.nonce = nonce;
+		}
+	}
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function getNonce() {
+	if (false) {}
+
+	return __webpack_require__.nc;
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = typeof options.transform === 'function'
+		 ? options.transform(obj.css) 
+		 : options.transform.default(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
 
 /***/ }),
 
@@ -127,7 +613,96 @@ eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element with a data-uri to\n * embed the css on the page. This breaks all relative urls because now they are relative to a\n * bundle instead of the current page.\n *\n * One solution is to only use full urls, but that may be impossible.\n *\n * Instead, this function \"fixes\" the relative urls to be absolute according to the current page location.\n *\n * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.\n *\n */\n\nmodule.exports = function (css) {\n  // get current location\n  var location = typeof window !== \"undefined\" && window.location;\n\n  if (!location) {\n    throw new Error(\"fixUrls requires window.location\");\n  }\n\n\t// blank or null?\n\tif (!css || typeof css !== \"string\") {\n\t  return css;\n  }\n\n  var baseUrl = location.protocol + \"//\" + location.host;\n  var currentDir = baseUrl + location.pathname.replace(/\\/[^\\/]*$/, \"/\");\n\n\t// convert each url(...)\n\t/*\n\tThis regular expression is just a way to recursively match brackets within\n\ta string.\n\n\t /url\\s*\\(  = Match on the word \"url\" with any whitespace after it and then a parens\n\t   (  = Start a capturing group\n\t     (?:  = Start a non-capturing group\n\t         [^)(]  = Match anything that isn't a parentheses\n\t         |  = OR\n\t         \\(  = Match a start parentheses\n\t             (?:  = Start another non-capturing groups\n\t                 [^)(]+  = Match anything that isn't a parentheses\n\t                 |  = OR\n\t                 \\(  = Match a start parentheses\n\t                     [^)(]*  = Match anything that isn't a parentheses\n\t                 \\)  = Match a end parentheses\n\t             )  = End Group\n              *\\) = Match anything and then a close parens\n          )  = Close non-capturing group\n          *  = Match anything\n       )  = Close capturing group\n\t \\)  = Match a close parens\n\n\t /gi  = Get all matches, not the first.  Be case insensitive.\n\t */\n\tvar fixedCss = css.replace(/url\\s*\\(((?:[^)(]|\\((?:[^)(]+|\\([^)(]*\\))*\\))*)\\)/gi, function(fullMatch, origUrl) {\n\t\t// strip quotes (if they exist)\n\t\tvar unquotedOrigUrl = origUrl\n\t\t\t.trim()\n\t\t\t.replace(/^\"(.*)\"$/, function(o, $1){ return $1; })\n\t\t\t.replace(/^'(.*)'$/, function(o, $1){ return $1; });\n\n\t\t// already a full url? no change\n\t\tif (/^(#|data:|http:\\/\\/|https:\\/\\/|file:\\/\\/\\/|\\s*$)/i.test(unquotedOrigUrl)) {\n\t\t  return fullMatch;\n\t\t}\n\n\t\t// convert the url to a full url\n\t\tvar newUrl;\n\n\t\tif (unquotedOrigUrl.indexOf(\"//\") === 0) {\n\t\t  \t//TODO: should we add protocol?\n\t\t\tnewUrl = unquotedOrigUrl;\n\t\t} else if (unquotedOrigUrl.indexOf(\"/\") === 0) {\n\t\t\t// path should be relative to the base url\n\t\t\tnewUrl = baseUrl + unquotedOrigUrl; // already starts with '/'\n\t\t} else {\n\t\t\t// path should be relative to current directory\n\t\t\tnewUrl = currentDir + unquotedOrigUrl.replace(/^\\.\\//, \"\"); // Strip leading './'\n\t\t}\n\n\t\t// send back the fixed url(...)\n\t\treturn \"url(\" + JSON.stringify(newUrl) + \")\";\n\t});\n\n\t// send back the fixed css\n\treturn fixedCss;\n};\n\n\n//# sourceURL=webpack:///./node_modules/style-loader/lib/urls.js?");
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+  // get current location
+  var location = typeof window !== "undefined" && window.location;
+
+  if (!location) {
+    throw new Error("fixUrls requires window.location");
+  }
+
+	// blank or null?
+	if (!css || typeof css !== "string") {
+	  return css;
+  }
+
+  var baseUrl = location.protocol + "//" + location.host;
+  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+	// convert each url(...)
+	/*
+	This regular expression is just a way to recursively match brackets within
+	a string.
+
+	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+	   (  = Start a capturing group
+	     (?:  = Start a non-capturing group
+	         [^)(]  = Match anything that isn't a parentheses
+	         |  = OR
+	         \(  = Match a start parentheses
+	             (?:  = Start another non-capturing groups
+	                 [^)(]+  = Match anything that isn't a parentheses
+	                 |  = OR
+	                 \(  = Match a start parentheses
+	                     [^)(]*  = Match anything that isn't a parentheses
+	                 \)  = Match a end parentheses
+	             )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+	 \)  = Match a close parens
+
+	 /gi  = Get all matches, not the first.  Be case insensitive.
+	 */
+	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
+		// strip quotes (if they exist)
+		var unquotedOrigUrl = origUrl
+			.trim()
+			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
+			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
+
+		// already a full url? no change
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
+		  return fullMatch;
+		}
+
+		// convert the url to a full url
+		var newUrl;
+
+		if (unquotedOrigUrl.indexOf("//") === 0) {
+		  	//TODO: should we add protocol?
+			newUrl = unquotedOrigUrl;
+		} else if (unquotedOrigUrl.indexOf("/") === 0) {
+			// path should be relative to the base url
+			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+		} else {
+			// path should be relative to current directory
+			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+		}
+
+		// send back the fixed url(...)
+		return "url(" + JSON.stringify(newUrl) + ")";
+	});
+
+	// send back the fixed css
+	return fixedCss;
+};
+
 
 /***/ }),
 
@@ -139,7 +714,54 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/main.css */ \"./src/css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/main */ \"./src/js/main.js\");\n\r\n\r\n\r\nwindow.TimeTable = function(obj){\r\n    Object(_js_main__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(obj);\r\n};\r\nwindow.onload = function(){\r\n    let a = Object(_js_main__WEBPACK_IMPORTED_MODULE_1__[\"default\"])({\r\n        startTime: \"10:00\",\r\n        endTime: \"22:00\",\r\n        divTime: \"15\",\r\n        shift:{\r\n            \"12\": {\r\n                name: \"MARK\",\r\n                planWork: \"10:00-15:00\",\r\n                planRest: \"12:00-13:00\",\r\n                realWork: \"11:00-16:00\",\r\n                realRest: \"13:00-14:00\",\r\n                },\r\n            \"4\": {\r\n                name: \"JOHN\",\r\n                planWork: \"09:00-18:00\",\r\n                planRest: \"13:00-14:00\",\r\n                realWork: \"09:00-18:00\",\r\n                realRest: \"14:00-15:15\",\r\n                },\r\n            \"8\": {\r\n                name: \"JOB\",\r\n                planWork: \"11:00-18:00\",\r\n                planRest: \"13:00-14:00\",\r\n                realWork: \"09:00-18:00\",\r\n                realRest: \"14:00-15:15\",\r\n                },\r\n                \r\n            \"10\": {\r\n                name: \"NOJOBMAN\",\r\n                planWork: \"\",\r\n                planRest: \"\",\r\n                realWork: \"\",\r\n                realRest: \"\",\r\n                },\r\n        }\r\n    });\r\n}\n\n//# sourceURL=webpack:///./src/app.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/main.css */ "./src/css/main.css");
+/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _js_main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/main */ "./src/js/main.js");
+
+
+
+window.TimeTable = function(obj){
+    Object(_js_main__WEBPACK_IMPORTED_MODULE_1__["default"])(obj);
+};
+window.onload = function(){
+    let a = Object(_js_main__WEBPACK_IMPORTED_MODULE_1__["default"])({
+        startTime: "10:00",
+        endTime: "22:00",
+        divTime: "15",
+        shift:{
+            "12": {
+                name: "MARK",
+                planWork: "10:00-15:00",
+                planRest: "12:00-13:00",
+                realWork: "11:00-16:00",
+                realRest: "13:00-14:00",
+                },
+            "4": {
+                name: "JOHN",
+                planWork: "09:00-18:00",
+                planRest: "13:00-14:00",
+                realWork: "09:00-18:00",
+                realRest: "14:00-15:15",
+                },
+            "8": {
+                name: "JOB",
+                planWork: "11:00-18:00",
+                planRest: "13:00-14:00",
+                realWork: "09:00-18:00",
+                realRest: "14:00-15:15",
+                },
+                
+            "10": {
+                name: "NOJOBMAN",
+                planWork: "",
+                planRest: "",
+                realWork: "",
+                realRest: "",
+                },
+        }
+    });
+}
 
 /***/ }),
 
@@ -150,7 +772,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./main.css */ \"./node_modules/css-loader/dist/cjs.js!./src/css/main.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/css/main.css?");
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./main.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/main.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -162,7 +803,131 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dis
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({    /**\r\n    * Convert time working time into minutes\r\n    * If ending time passes 00:00, add 1440(24H) to returning minutes.\r\n    * @param  {string} time : Format should be \"HH:MM-HH:MM\".\r\n    * @example let [o,c] = twoTime2Int('10:00-23:00')\r\n    * @return  {int} oTime : Opening time converted as minutes\r\n    * {int} cTime   : Closing time converted as minutes\r\n    */\r\n    twoTime2Int: function(time){\r\n        // Starting Time\r\n        let oTime = this.time2Int(time.substring(0,5));\r\n        // Ending Time\r\n        let cTime = this.time2Int(time.substring(6,11));\r\n        // Process for Ending Time exceeds 00:00\r\n        if(oTime > cTime){\r\n            // Minute of 24 hours * 60 minute\r\n            cTime += 1440;\r\n        }\r\n        return [oTime, cTime];\r\n    },\r\n    /**\r\n    * Convert time into integer\r\n    * @param  {string} time : Format should be \"HH:MM\".\r\n    * @example : time2Int(\"23:45\")\r\n    * @return  {int}        : Time converted as minutes\r\n    * @example : 1425\r\n    */\r\n    time2Int: function(time){\r\n        // Hour\r\n        const h = time.substring(0,2);\r\n        // Minute\r\n        const m = time.substring(3,5);\r\n        return (parseInt(h,10) * 60 + parseInt(m,10));\r\n    },\r\n    /**\r\n    * convert time into integer\r\n    * @param  {int}   time : Time converted as minutes\r\n    * @example : int2Time(1425)\r\n    * @return  {string} returnTime : Format should be \"HH:MM\".\r\n    * @example : 23:45\r\n    */\r\n    int2Time: function(time){\r\n        // Hour\r\n        let h = Math.floor(time / 60);\r\n        if(h >= 24)h -= 24;\r\n        // Minute\r\n        let m = time % 60;\r\n        // Add 0 when only 1 digit\r\n        return (this.toDoubleDigits(h) + \":\" +  this.toDoubleDigits(m));\r\n    },\r\n    /**\r\n    * Add 0 to number if it is only 1 digit\r\n    * @param  {int}    num : Number.\r\n    * @return {string} num : Number with 0.\r\n    */\r\n    toDoubleDigits: function(num) {\r\n        num += \"\";\r\n        if (num.length === 1) {\r\n            num = \"0\" + num;\r\n        }\r\n        return num;\r\n    },\r\n    /**\r\n    * 第1引数を対象にし、第2引数のキーが見つかるまでループ。\r\n    * 第1引数のobjを昇順の配列にして返す。\r\n    * かなり適当\r\n    * シフトが入っていない人は後ろの配列にくる\r\n    */\r\n    orderByShift: function(obj){\r\n        // id, startTimeの連想配列を作成\r\n        this.tmpArr = [];\r\n        let times = [];\r\n        // シフトがまだの人の配列\r\n        let noTimes = [];\r\n        let ret = [];\r\n        for(let key in obj){\r\n            let t = obj[key].planWork;\r\n            if(t === \"\"){\r\n                let t = {};\r\n                t[key] = obj[key];\r\n                noTimes.push(t);\r\n            }else{\r\n                times.push(t);\r\n            }\r\n        }\r\n        noTimes.sort();\r\n        times.sort();\r\n        console.log(times);\r\n        for(let i in times){\r\n            for(let key in obj){\r\n                if(obj[key].planWork === times[i]){\r\n                    let t = {};\r\n                    t[key] = obj[key];\r\n                    ret.push(t);\r\n                }\r\n            }\r\n        }\r\n        return ret.concat(noTimes);\r\n    },\r\n    /**\r\n    * 第1引数を対象にし、第2引数のキーが見つかるまでループ。\r\n    * 第2引数に対応する値を配列にして\r\n    * ※事前にthis.tmpArrを空にする必要あり\r\n    */\r\n    findJsonKey: function(obj, target){\r\n        for (var key in obj){\r\n            if(key === target)this.tmpArr.push(obj[key]);\r\n            if (typeof obj[key] == \"object\") {\r\n                if(Array.isArray(obj[key])) {\r\n                    // 配列の場合は forEach で要素ごとにに再帰呼び出し\r\n                    obj[key].forEach(function(item){\r\n                        this.findJsonKey(item, target) ;\r\n                    });\r\n                }else{\r\n                    // 連想配列はそのまま再帰呼び出し\r\n                    this.findJsonKey(obj[key], target) ;\r\n                }  \r\n            }\r\n        }\r\n    },\r\n    debug: function(str){\r\n        $(\"#debug\").append(str);\r\n    }\r\n});\n\n//# sourceURL=webpack:///./src/js/common.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({    /**
+    * Convert time working time into minutes
+    * If ending time passes 00:00, add 1440(24H) to returning minutes.
+    * @param  {string} time : Format should be "HH:MM-HH:MM".
+    * @example let [o,c] = twoTime2Int('10:00-23:00')
+    * @return  {int} oTime : Opening time converted as minutes
+    * {int} cTime   : Closing time converted as minutes
+    */
+    twoTime2Int: function(time){
+        // Starting Time
+        let oTime = this.time2Int(time.substring(0,5));
+        // Ending Time
+        let cTime = this.time2Int(time.substring(6,11));
+        // Process for Ending Time exceeds 00:00
+        if(oTime > cTime){
+            // Minute of 24 hours * 60 minute
+            cTime += 1440;
+        }
+        return [oTime, cTime];
+    },
+    /**
+    * Convert time into integer
+    * @param  {string} time : Format should be "HH:MM".
+    * @example : time2Int("23:45")
+    * @return  {int}        : Time converted as minutes
+    * @example : 1425
+    */
+    time2Int: function(time){
+        // Hour
+        const h = time.substring(0,2);
+        // Minute
+        const m = time.substring(3,5);
+        return (parseInt(h,10) * 60 + parseInt(m,10));
+    },
+    /**
+    * convert time into integer
+    * @param  {int}   time : Time converted as minutes
+    * @example : int2Time(1425)
+    * @return  {string} returnTime : Format should be "HH:MM".
+    * @example : 23:45
+    */
+    int2Time: function(time){
+        // Hour
+        let h = Math.floor(time / 60);
+        if(h >= 24)h -= 24;
+        // Minute
+        let m = time % 60;
+        // Add 0 when only 1 digit
+        return (this.toDoubleDigits(h) + ":" +  this.toDoubleDigits(m));
+    },
+    /**
+    * Add 0 to number if it is only 1 digit
+    * @param  {int}    num : Number.
+    * @return {string} num : Number with 0.
+    */
+    toDoubleDigits: function(num) {
+        num += "";
+        if (num.length === 1) {
+            num = "0" + num;
+        }
+        return num;
+    },
+    /**
+    * 第1引数を対象にし、第2引数のキーが見つかるまでループ。
+    * 第1引数のobjを昇順の配列にして返す。
+    * かなり適当
+    * シフトが入っていない人は後ろの配列にくる
+    */
+    orderByShift: function(obj){
+        let times = [];
+        // シフトがまだの人の配列
+        let noTimes = [];
+        let ret = [];
+        for(let key in obj){
+            let t = obj[key].planWork;
+            if(t === ""){
+                let t = {};
+                t[key] = obj[key];
+                noTimes.push(t);
+            }else{
+                times.push(t);
+            }
+        }
+        noTimes.sort();
+        times.sort();
+        for(let i in times){
+            console.log(i);
+            for(let key in obj){
+                console.log(Object.keys(obj).length);
+                if(obj[key].planWork === times[i]){
+                    let t = {};
+                    t[key] = obj[key];
+                    ret.push(t);
+                }
+            }
+        }
+        ret = ret.concat(noTimes);
+        return ret;
+    },
+    /**
+    * 第1引数を対象にし、第2引数のキーが見つかるまでループ。
+    * 第2引数に対応する値を配列にして
+    * ※事前にthis.tmpArrを空にする必要あり
+    */
+    findJsonKey: function(obj, target){
+        for (var key in obj){
+            if(key === target)this.tmpArr.push(obj[key]);
+            if (typeof obj[key] == "object") {
+                if(Array.isArray(obj[key])) {
+                    // 配列の場合は forEach で要素ごとにに再帰呼び出し
+                    obj[key].forEach(function(item){
+                        this.findJsonKey(item, target) ;
+                    });
+                }else{
+                    // 連想配列はそのまま再帰呼び出し
+                    this.findJsonKey(obj[key], target) ;
+                }  
+            }
+        }
+    },
+    debug: function(str){
+        $("#debug").append(str);
+    }
+});
 
 /***/ }),
 
@@ -174,8 +939,139 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common */ \"./src/js/common.js\");\n\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (function(obj){\r\n    if($(\"#timetable\").length === 0){\r\n        console.log(`Parameter ${selector} is not found.`);\r\n        return false;\r\n    };\r\n    let startTime = _common__WEBPACK_IMPORTED_MODULE_0__[\"default\"].time2Int(obj.startTime);\r\n    let endTime = _common__WEBPACK_IMPORTED_MODULE_0__[\"default\"].time2Int(obj.endTime);\r\n    let divTime = obj.divTime;\r\n    let shift = obj.shift;\r\n    \r\n    // HH:00にならない場合\r\n    // 開始時間決定\r\n    if(startTime % 60){\r\n        startTime -= startTime % 60;\r\n    }\r\n    //終了時間決定\r\n    if(endTime % 60){\r\n        endTime += 60 - endTime % 60;\r\n    }\r\n    let header = $(`<div class=\"tt-header\"></div>`);\r\n    // header作成\r\n    let headerCnt = (endTime - startTime)/60;\r\n    // 動的に幅を変更するためにCSSに変数を設定\r\n    $(\"#timetable\")[0].style.setProperty(\"--columns\", headerCnt + 1);\r\n    $(\"#timetable\")[0].style.setProperty(\"--columnsPx\", `${headerCnt + 1}px`);\r\n    $(header).append(`<div>名前</div>`);\r\n    for(let i = 0; i < headerCnt; i++){\r\n        let s = _common__WEBPACK_IMPORTED_MODULE_0__[\"default\"].int2Time(startTime + (i * 60));\r\n        let e = _common__WEBPACK_IMPORTED_MODULE_0__[\"default\"].int2Time(startTime + ((i + 1) * 60));\r\n        $(header).append($(`<div>${s}-${e}</div>`));\r\n    }\r\n    // 合計行\r\n    $(header).append($(`<div>合計</div>`));\r\n    $(\"#timetable\").append($(header));\r\n    function update(){\r\n        // まずは消す\r\n        let rows = $(\".tt-row\");\r\n        for(let i = 0; i < rows.length; i++){\r\n            rows[i].remove();\r\n        }\r\n        let arrShift = _common__WEBPACK_IMPORTED_MODULE_0__[\"default\"].orderByShift(shift);\r\n        console.log(arrShift)\r\n        for(let i = 0; i < arrShift.length; i++){\r\n            let obj = arrShift[i];\r\n            for(let key in obj){\r\n                let d = obj[key];\r\n                let rowData = $(`<div class=\"tt-row\"></div>`);\r\n                // 名前列\r\n                $(rowData).append(`<div>${d.name}</div>`);\r\n                // シフト列\r\n                // 時間がある場合のみ\r\n                let time = 0;\r\n                if(d.planWork){\r\n                    let planTime = _common__WEBPACK_IMPORTED_MODULE_0__[\"default\"].twoTime2Int(d.planWork);\r\n                    time = planTime[1] - planTime[0];\r\n                    if(d.planRest){\r\n                        let planRest = _common__WEBPACK_IMPORTED_MODULE_0__[\"default\"].twoTime2Int(d.planRest);\r\n                        time = time - (planRest[1] - planRest[0]);\r\n                    }\r\n                }\r\n                $(rowData).append(`<div class=\"tt-row_data\"></div>`);\r\n                // 合計\r\n                $(rowData).append(`<div>${time/60}H</div>`);\r\n                $(\"#timetable\").append(rowData);\r\n            }\r\n        }\r\n    }\r\n    update();\r\n    setTimeout(()=>{\r\n        shift[\"200\"] = {\r\n            name: \"2000msAfter-ADDED\",\r\n            planWork: \"13:00-15:00\",\r\n            planRest: \"\",\r\n        }\r\n        console.log(\"updated\");\r\n        update()},\r\n    2000);\r\n});\n\n//# sourceURL=webpack:///./src/js/main.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common */ "./src/js/common.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function(obj){
+    if($("#timetable").length === 0){
+        console.log(`Parameter ${selector} is not found.`);
+        return false;
+    };
+    let startTime = _common__WEBPACK_IMPORTED_MODULE_0__["default"].time2Int(obj.startTime);
+    let endTime = _common__WEBPACK_IMPORTED_MODULE_0__["default"].time2Int(obj.endTime);
+    let shift = obj.shift;
+    
+    // HH:00にならない場合
+    // 開始時間決定
+    if(startTime % 60){
+        startTime -= startTime % 60;
+    }
+    //終了時間決定
+    if(endTime % 60){
+        endTime += 60 - endTime % 60;
+    }
+    let header = $(`<div class="tt-header"></div>`);
+    // header作成
+    let headerCnt = (endTime - startTime)/60;
+    // 動的に幅を変更するためにCSSに変数を設定
+    $("#timetable")[0].style.setProperty("--columns", headerCnt + 1);
+    $("#timetable")[0].style.setProperty("--columnsPx", `${headerCnt + 1}px`);
+    $(header).append(`<div>名前</div>`);
+    let headerTime = $(`<div class="tt-header_time"></div>`)
+    for(let i = 0; i < headerCnt; i++){
+        let s = _common__WEBPACK_IMPORTED_MODULE_0__["default"].int2Time(startTime + (i * 60));
+        let e = _common__WEBPACK_IMPORTED_MODULE_0__["default"].int2Time(startTime + ((i + 1) * 60));
+        $(headerTime).append($(`<div>${s}-${e}</div>`));
+    }
+    $(header).append(headerTime);
+    // 合計列
+    $(header).append($(`<div>合計</div>`));
+    $("#timetable").append($(header));
+    function setTimeDiv(target, d){
+        for(let i = 0; i < 5; i++){
+            let s = startTime;
+            let e = endTime;
+            let pw = (d.planWork)? _common__WEBPACK_IMPORTED_MODULE_0__["default"].twoTime2Int(d.planWork): [999,999];
+            let pr = (d.planRest)? _common__WEBPACK_IMPORTED_MODULE_0__["default"].twoTime2Int(d.planRest): [999,999];
+            let rw = (d.realWork)? _common__WEBPACK_IMPORTED_MODULE_0__["default"].twoTime2Int(d.realWork): [999,999];
+            let rr = (d.realRest)? _common__WEBPACK_IMPORTED_MODULE_0__["default"].twoTime2Int(d.realRest): [999,999];
+            let rowRow = $(`<div></div>`);
+            let currentTime = startTime;
+            // 中央の3行
+            for(let j = 0; j < headerCnt; j++){
+                let space = $(`<div class="tt-row_space"></div>`);
+                if(i > 0 && i < 4){
+                    for(let k = 0; k < 4; k++){
+                        let shift = $(`<div class="shift"></div>`);
+                        // 色塗り
+                        if(currentTime >= pw[0] && currentTime < pw[1]){
+                            $(shift).addClass("planWork");
+                        };
+                        if(currentTime >= pr[0] && currentTime < pr[1]){
+                            $(shift).addClass("planRest");
+                        };
+                        //リアルワーク
+                        if(i === 2){
+                            if(currentTime >= rw[0] && currentTime < rw[1]){
+                                $(shift).addClass("realWork");
+                            };
+                            if(currentTime >= rr[0] && currentTime < rr[1]){
+                                $(shift).addClass("realRest");
+                            };
+                        }
+                        $(space).append(shift);
+                        currentTime += 15;
+                    }
+                }
+                $(rowRow).append(space);
+            }
+            $(target).append(rowRow);
+        }
+        return target;
+    }
+    function update(shifts){
+        // まずは消す
+        let rows = $(".tt-row");
+        for(let i = 0; i < rows.length; i++){
+            $(rows[i]).off();
+            $(rows[i]).remove();
+        }
+        let arrShift = _common__WEBPACK_IMPORTED_MODULE_0__["default"].orderByShift(shifts);
+        for(let i = 0; i < arrShift.length; i++){
+            let obj = arrShift[i];
+            for(let key in obj){
+                let d = obj[key];
+                let rowData = $(`<div class="tt-row"></div>`);
+                // 名前列
+                let name = $(`<div id="${key}" class="js-name">${d.name}</div>`);
+                $(rowData).append(name);
+                // シフト列
+                let ttRow = $(`<div class="tt-row_data"></div>`);
+                ttRow = setTimeDiv(ttRow, d);
+                $(rowData).append(ttRow);
+                // 時間がある場合のみ
+                let time = 0;
+                if(d.planWork){
+                    let planTime = _common__WEBPACK_IMPORTED_MODULE_0__["default"].twoTime2Int(d.planWork);
+                    time = planTime[1] - planTime[0];
+                    if(d.planRest){
+                        let planRest = _common__WEBPACK_IMPORTED_MODULE_0__["default"].twoTime2Int(d.planRest);
+                        time = time - (planRest[1] - planRest[0]);
+                    }
+                }
+                // 合計
+                $(rowData).append(`<div>${time/60}H</div>`);
+                $("#timetable").append(rowData);
+            }
+        }
+    }
+    update(shift);
+    // イベントのはっつけ
+    $(document).on("click", ".js-name", function(){
+        let key = $(this).attr("id");
+        shift[key].planWork = "15:00-18:00";
+        // 消す
+        let rows = $(".tt-row");
+        for(let i = 0; i < rows.length; i++){
+            $(rows[i]).off();
+            $(rows[i]).remove();
+        }
+        setTimeout(()=>{update(shift)},0);
+    });
+});
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=TimeTable.js.map

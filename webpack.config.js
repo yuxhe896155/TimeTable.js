@@ -1,6 +1,7 @@
 module.exports = {
     entry: "./src/app.js",
     mode: "development",
+    devtool: 'source-map',
     output: {
         filename: "./TimeTable.js"
     },
