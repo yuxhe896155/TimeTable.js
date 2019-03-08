@@ -95,7 +95,7 @@
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "@char-set \"utf-8\";\r\n\r\n\r\n#timetable{\r\n    --columns: 10;\r\n    --columnsPx: 3;\r\n    --borderColor: rgb(150,150,150);\r\n    --nameWidth: 200px;\r\n    --height: 50px;\r\n    --perColumn: calc((100% - var(--nameWidth)) / var(--columns));\r\n    --win : 100%;\r\n    width: 100%;\r\n    overflow-x: hidden;\r\n    cursor: default;\r\n}\r\n.tt-header{\r\n    height: 30px;\r\n}\r\n/* 名前 */\r\n.tt-header > div:first-child{\r\n    border: 1px solid var(--borderColor);\r\n    border-right: 0;\r\n    float: left;\r\n    height: 100%;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    line-height: 30px;\r\n    white-space: nowrap;\r\n    width: calc(var(--perColumn) - 2px);\r\n    text-align: center;\r\n}\r\n.tt-header_time{\r\n    border: 1px solid var(--borderColor);\r\n    border-right: 0;\r\n    float: left;\r\n    height: 100%;\r\n    width: calc(var(--perColumn) * (var(--columns) - 1) - 1px * var(--columns));\r\n    text-align: center;\r\n}\r\n.tt-header_time > div{\r\n    border-right: 1px solid var(--borderColor);\r\n    float: left;\r\n    overflow: hidden;\r\n    height: 100%;\r\n    text-overflow: ellipsis;\r\n    line-height: 30px;\r\n    white-space: nowrap;\r\n    width: calc(100% / (var(--columns) - 1) - 1px);\r\n}\r\n\r\n/* 合計 */\r\n.tt-header > div:last-child{\r\n    border: 1px solid var(--borderColor);\r\n    border-left: 0;\r\n    width: calc(var(--perColumn) - 2px);\r\n    height: 100%;\r\n    float: left;\r\n    text-align: center;\r\n    line-height: 30px;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\r\n}\r\n\r\n/* 名前 */\r\n.tt-header > div:first-child{\r\n    width: var(--nameWidth);\r\n}\r\n.tt-row{\r\n    clear: both;\r\n    height: var(--height);\r\n}\r\n.tt-row > div:first-child{\r\n    border: 1px solid var(--borderColor);\r\n    border-right: none;\r\n    border-top: none;\r\n    float: left;\r\n    height: var(--height);\r\n    width: var(--nameWidth);\r\n    text-align: center;\r\n    line-height: var(--height);\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\r\n}\r\n\r\n\r\n/* 1行 */\r\n.tt-row_data{\r\n    float: left;\r\n    height: var(--height);\r\n    border: 1px solid var(--borderColor);\r\n    border-top: 0;\r\n    border-right: 0;\r\n    width: calc(var(--perColumn) * (var(--columns) - 1) - 1px * var(--columns));\r\n}\r\n.tt-row > div:last-child{\r\n    border: 1px solid var(--borderColor);\r\n    border-top: 0;\r\n    border-left: 0;\r\n    width: calc(var(--perColumn) - 2px);\r\n    height: var(--height);\r\n    float: left;\r\n    text-align: center;\r\n    line-height: var(--height);\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\r\n}\r\n/* さらに細かい1行 */\r\n.tt-row_data > div{\r\n    height: calc(var(--height) / 5);\r\n}\r\n/* 空行 */\r\n.tt-row_space{\r\n    float: left;\r\n    height: calc(var(--height) / 5);\r\n    border-right: 1px solid var(--borderColor);\r\n    width: calc(100% / (var(--columns) - 1) - 1px);\r\n}\r\n.shift{\r\n    height: 100%;\r\n    float: left;\r\n    width: calc(100% / 4);\r\n}\r\n.planWork{\r\n    background: rgba(153, 207, 229, 0.7);\r\n}\r\n.planRest{\r\n    background: rgba(246,213,128, 0.7);\r\n}\r\n.realWork{\r\n    background: rgba(75, 117, 185, 1.0);\r\n}\r\n.realRest{\r\n    background: rgba(240, 186, 50,1.0);\r\n}", ""]);
+exports.push([module.i, "@char-set \"utf-8\";\r\n\r\n\r\n#timetable{\r\n    --columns: 10;\r\n    --columnsPx: 3;\r\n    --borderColor: rgb(150,150,150);\r\n    --nameWidth: 200px;\r\n    --height: 50px;\r\n    --perColumn: calc((100% - var(--nameWidth)) / var(--columns));\r\n    --win : 100%;\r\n    width: 100%;\r\n    overflow-x: hidden;\r\n    cursor: default;\r\n}\r\n.tt-header{\r\n    height: 30px;\r\n}\r\n/* 名前 */\r\n.tt-header > div:first-child{\r\n    border: 1px solid var(--borderColor);\r\n    border-right: 0;\r\n    float: left;\r\n    height: 100%;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    line-height: 30px;\r\n    white-space: nowrap;\r\n    width: calc(var(--perColumn) - 2px);\r\n    text-align: center;\r\n}\r\n.tt-header_time{\r\n    border: 1px solid var(--borderColor);\r\n    border-right: 0;\r\n    float: left;\r\n    height: 100%;\r\n    width: calc(var(--perColumn) * (var(--columns) - 1) - 1px * var(--columns));\r\n    text-align: center;\r\n}\r\n.tt-header_time > div{\r\n    border-right: 1px solid var(--borderColor);\r\n    float: left;\r\n    overflow: hidden;\r\n    height: 100%;\r\n    text-overflow: ellipsis;\r\n    line-height: 30px;\r\n    white-space: nowrap;\r\n    width: calc(100% / (var(--columns) - 1) - 1px);\r\n}\r\n\r\n/* 合計 */\r\n.tt-header > div:last-child{\r\n    border: 1px solid var(--borderColor);\r\n    border-left: 0;\r\n    width: calc(var(--perColumn) - 2px);\r\n    height: 100%;\r\n    float: left;\r\n    text-align: center;\r\n    line-height: 30px;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\r\n}\r\n\r\n/* 名前 */\r\n.tt-header > div:first-child{\r\n    width: var(--nameWidth);\r\n}\r\n.tt-row{\r\n    clear: both;\r\n    height: var(--height);\r\n}\r\n.tt-row > div:first-child{\r\n    border: 1px solid var(--borderColor);\r\n    border-right: none;\r\n    border-top: none;\r\n    float: left;\r\n    height: var(--height);\r\n    width: var(--nameWidth);\r\n    text-align: center;\r\n    line-height: var(--height);\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\r\n}\r\n\r\n\r\n/* 1行 */\r\n.tt-row_data{\r\n    float: left;\r\n    height: var(--height);\r\n    border: 1px solid var(--borderColor);\r\n    border-top: 0;\r\n    border-right: 0;\r\n    width: calc(var(--perColumn) * (var(--columns) - 1) - 1px * var(--columns));\r\n}\r\n.tt-row > div:last-child{\r\n    border: 1px solid var(--borderColor);\r\n    border-top: 0;\r\n    border-left: 0;\r\n    width: calc(var(--perColumn) - 2px);\r\n    height: var(--height);\r\n    float: left;\r\n    text-align: center;\r\n    line-height: var(--height);\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\r\n}\r\n/* さらに細かい1行 */\r\n.tt-row_data > div{\r\n    height: calc(var(--height) / 5);\r\n}\r\n/* 空行 */\r\n.tt-row_space{\r\n    float: left;\r\n    height: calc(var(--height) / 5);\r\n    border-right: 1px solid var(--borderColor);\r\n    width: calc(100% / (var(--columns) - 1) - 1px);\r\n}\r\n.shift{\r\n    height: 100%;\r\n    float: left;\r\n    width: calc(100% / 4);\r\n}\r\n.planWork{\r\n    background: rgba(153, 207, 229, 0.7);\r\n}\r\n.planRest{\r\n    background: rgba(246,213,128, 0.7);\r\n}\r\n.realWork{\r\n    background: rgba(75, 117, 185, 1.0);\r\n}\r\n.realRest{\r\n    background: rgba(240, 186, 50,1.0);\r\n}\r\n\r\n.tt-overlay{\r\n    background: rgba(0,0,0,0.3);\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n\r\n}\r\n.tt-overlayQ{\r\n    height: 50%;\r\n    width: 50%;\r\n    position: absolute;\r\n    top: 50%;\r\n    left:50%;\r\n}\r\n.tt-dialog{\r\n    background: rgb(240,240,240);\r\n    border-radius: 5px;\r\n    padding: 20px;\r\n    text-align: center;\r\n    transform: translate(-50%, -50%);\r\n    width: 300px;\r\n    border: 1px solid rgba(0,0,0,0.5);\r\n    box-shadow: 3px 3px 3px rgba(0,0,0,0.4);;\r\n}\r\n.dialog-time > input{\r\n    width: 50px;\r\n}\r\n\r\n.dialog-time{\r\n    padding: 10px;\r\n}\r\n.dialog-eachTime{\r\n    width: 50px;\r\n}\r\n.dialog-eathTime > *{\r\n    width: 50px;\r\n}\r\n.dialog-time:last-child{\r\n    padding-bottom: 0;\r\n}\r\n.tt-btn{\r\n    border: 1px solid rgb(120,120,120);\r\n    color: rgb(250,250,250);\r\n    cursor: pointer;\r\n    height: 30px;\r\n    margin: 0 10px;\r\n    outline: none;\r\n    width: 80px;\r\n    border-radius: 5px;\r\n}\r\n.tt-btn_ok{\r\n    background: #45a1cf;\r\n}\r\n.tt-btn_ok:hover{\r\n    background:#208DC3;\r\n}\r\n.tt-btn_ok:active{\r\n    background: #007AB7;\r\n}\r\n.tt-btn_cancel{\r\n    color: rgb(30,30,30);\r\n    background: rgb(235, 235, 235);\r\n}\r\n.tt-btn_cancel:hover{\r\n    background: rgb(225, 225, 225);\r\n}\r\n.tt-btn_cancel:active{\r\n    background: rgb(205, 205, 205);\r\n}\r\n.dialog-name{\r\n    font-size: 17px;\r\n    margin-bottom: 10px;\r\n}", ""]);
 
 
 
@@ -722,46 +722,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.TimeTable = function(obj){
-    Object(_js_main__WEBPACK_IMPORTED_MODULE_1__["default"])(obj);
+    return Object(_js_main__WEBPACK_IMPORTED_MODULE_1__["default"])(obj);
 };
-window.onload = function(){
-    let a = Object(_js_main__WEBPACK_IMPORTED_MODULE_1__["default"])({
-        startTime: "10:00",
-        endTime: "22:00",
-        divTime: "15",
-        shift:{
-            "12": {
-                name: "MARK",
-                planWork: "10:00-15:00",
-                planRest: "12:00-13:00",
-                realWork: "11:00-16:00",
-                realRest: "13:00-14:00",
-                },
-            "4": {
-                name: "JOHN",
-                planWork: "09:00-18:00",
-                planRest: "13:00-14:00",
-                realWork: "09:00-18:00",
-                realRest: "14:00-15:15",
-                },
-            "8": {
-                name: "JOB",
-                planWork: "11:00-18:00",
-                planRest: "13:00-14:00",
-                realWork: "09:00-18:00",
-                realRest: "14:00-15:15",
-                },
-                
-            "10": {
-                name: "NOJOBMAN",
-                planWork: "",
-                planRest: "",
-                realWork: "",
-                realRest: "",
-                },
-        }
-    });
-}
 
 /***/ }),
 
@@ -880,7 +842,6 @@ __webpack_require__.r(__webpack_exports__);
         let ret = [];
         for(let key in obj){
             let t = obj[key].planWork;
-            
             if(t === ""){
                 let t = {};
                 t[key] = obj[key];
@@ -904,7 +865,6 @@ __webpack_require__.r(__webpack_exports__);
             }
         }
         ret = ret.concat(noTimes);
-        console.log(ret)
         return ret;
     },
     /**
@@ -1042,12 +1002,16 @@ __webpack_require__.r(__webpack_exports__);
                 $(rowData).append(name);
                 // シフト列
                 let ttRow = $(`<div class="tt-row_data"></div>`);
+                $(ttRow).on("click", function(){
+                    // 押下した個別のシフトを渡す
+                    dispDialog(d,key);
+                });
                 ttRow = setTimeDiv(ttRow, d);
                 $(rowData).append(ttRow);
                 // 時間がある場合のみ
                 let time = 0;
                 if(d.planWork){
-                    let planTime = _common__WEBPACK_IMPORTED_MODULE_0__["default"].twoTime2Int(d.planWork);
+                    let planTime = (d.planWork.length)? _common__WEBPACK_IMPORTED_MODULE_0__["default"].twoTime2Int(d.planWork): [0,0];
                     time = planTime[1] - planTime[0];
                     if(d.planRest){
                         let planRest = _common__WEBPACK_IMPORTED_MODULE_0__["default"].twoTime2Int(d.planRest);
@@ -1055,24 +1019,146 @@ __webpack_require__.r(__webpack_exports__);
                     }
                 }
                 // 合計
-                $(rowData).append(`<div>${time/60}H</div>`);
+                $(rowData).append(`<div>${(time)?time/60:0}H</div>`);
                 $("#timetable").append(rowData);
             }
         }
     }
-    update(shift);
-    // イベントのはっつけ
-    $(document).on("click", ".js-name", function(){
-        let key = $(this).attr("id");
-        shift[key].planWork = "15:00-18:00";
-        // 消す
-        let rows = $(".tt-row");
-        for(let i = 0; i < rows.length; i++){
-            $(rows[i]).off();
-            $(rows[i]).remove();
+    function dispDialog(d,key){
+        let overlay = $(`<div class="tt-overlay"><div class="tt-overlayQ"></div></div>`).css({
+            height: window.innerHeight,
+            width: window.innerWidth
+        });
+        let planWork = (d.planWork)? [d.planWork.substring(0,5),d.planWork.substring(6,11)]: ["",""];
+        let planRest= (d.planRest)?  [d.planRest.substring(0,5),d.planRest.substring(6,11)]: ["",""];
+        let realWork = (d.realWork)? [d.realWork.substring(0,5),d.realWork.substring(6,11)]: ["",""];
+        let realRest= (d.realRest)?  [d.realRest.substring(0,5),d.realRest.substring(6,11)]: ["",""];
+        // ダイアログの中身
+        $("body").append(overlay);
+        let dialog = $(
+            `<div class="tt-dialog">
+                <div class="dialog-name">${d.name}</div>
+                <div class="dialog-time">
+                    予定労働時間: 
+                    <input type="time" id="planWorkStart" value="${planWork[0]}"> - <input type="time" id="planWorkEnd" value="${planWork[1]}">
+                </div>
+                <hr>
+                <div class="dialog-time">
+                    予定休憩時間: 
+                    <input type="time" id="planRestStart" value="${planRest[0]}"> - <input type="time" id="planRestEnd" value="${planRest[1]}">
+                </div>
+                <hr>
+                <div class="dialog-time">
+                    　実労働時間: 
+                    <input type="time" id="realWorkStart" value="${realWork[0]}"> - <input type="time" id="realWorkEnd" value="${realWork[1]}">
+                </div>
+                <hr>
+                <div class="dialog-time">
+                    　実休憩時間: 
+                    <input type="time" id="realRestStart" value="${realRest[0]}"> - <input type="time" id="realRestEnd" value="${realRest[1]}">
+                </div>
+                <hr>
+                <div class="dialog-time dialog-btn"></div>
+            </div>`);
+        // ボタンイベント
+        let okBtn = $(`<button class="tt-btn tt-btn_ok">OK</button>`).on("click",function(){
+            let pw = `${$("#planWorkStart").val()}-${$("#planWorkEnd").val()}`;
+            let pr = `${$("#planRestStart").val()}-${$("#planRestEnd").val()}`;
+            let rw = `${$("#realWorkStart").val()}-${$("#realWorkEnd").val()}`;
+            let rr = `${$("#realRestStart").val()}-${$("#realRestEnd").val()}`;
+            if(!checkTime(pw, pr, rw, rr))return false;
+            shift[key].planWork = (pw !== "-")?pw:"";
+            shift[key].planRest = (pr !== "-")?pr:"";
+            shift[key].realWork = (rw !== "-")?rw:"";
+            shift[key].realRest = (rr !== "-")?rr:"";
+            $(".tt-overlay").remove();
+            update(shift);
+        });
+        let cancelBtn = $(`<button class="tt-btn tt-btn_cancel">Cancel</button>`).on("click",function(){
+            $(".tt-overlay").remove();
+        });
+        dialog = $(dialog).find(".dialog-btn")
+            .append(okBtn).append(cancelBtn).end();
+        $(".tt-overlayQ").append(dialog);
+        // 労働時間系のイベント付与
+        let option = {
+            autosize: false,
+            useAmPm: false,
+            precision: 15,
+            fonts: {
+                clockOuterCircleFontSize: "14px",
+                clockInnerCircleFontSize: "14px",
+            },
+            minimum: _common__WEBPACK_IMPORTED_MODULE_0__["default"].int2Time(startTime),
+            maximum: _common__WEBPACK_IMPORTED_MODULE_0__["default"].int2Time(endTime),
+            onChange:function(newTime,oldTime){
+                this.value = (!newTime.length)? "": newTime;
+            }
         }
-        setTimeout(()=>{update(shift)},0);
-    });
+        option.value = "18:00";
+        $("#planWorkStart").clockTimePicker(option);
+        $("#planWorkEnd").clockTimePicker(option);
+        $("#planRestStart").clockTimePicker(option);
+        $("#planRestEnd").clockTimePicker(option);
+        $("#realWorkStart").clockTimePicker(option);
+        $("#realWorkEnd").clockTimePicker(option);
+        $("#realRestStart").clockTimePicker(option);
+        $("#realRestEnd").clockTimePicker(option);
+    }
+    function checkTime(pw,pr,rw,rr){
+        let times = [pw,pr,rw,rr];
+        // 開始がないor終了がない
+        for(let i in times){
+            let hasError = false;
+            if(times[i].length === 6)hasError = true;
+            if(hasError){
+                alert(`開始 or 終了時間の一方が欠けている時間があります。\n${times[i]}`);
+                return false;
+            }
+        }
+        // 各々の開始 >= 終了になっていないか
+        for(let i in times){
+            // 空の時間は飛ばす
+            if(!times[i][0].length)continue;
+            let s = _common__WEBPACK_IMPORTED_MODULE_0__["default"].time2Int(times[i].substring(0,5));
+            let e = _common__WEBPACK_IMPORTED_MODULE_0__["default"].time2Int(times[i].substring(6,11));
+            if(s >= e){
+                alert(`開始時間が終了時間よりも遅いor同じ時間があります。\n${times[i]}`);
+                return false;
+            }
+        }
+        // 予定労働時間&予定休憩時間がある
+        if(pw.length === 11 && pr.length === 11){
+            let pwInt = _common__WEBPACK_IMPORTED_MODULE_0__["default"].twoTime2Int(pw);
+            let prInt = _common__WEBPACK_IMPORTED_MODULE_0__["default"].twoTime2Int(pr);
+            let hasError = false;
+            if(pwInt[0] > prInt[0])hasError = true;
+            if(pwInt[1] < prInt[1])hasError = true;
+            if(hasError){
+                alert(`予定労働時間外に予定休憩時間が設定されています。
+                    \n予定労働時間：${pw}
+                    \n予定休憩時間：${pr}`);
+                return false;
+            }
+        }
+        // 実労働時間&実休憩時間がある
+        if(pw.length === 11 && pr.length === 11){
+            let rwInt = _common__WEBPACK_IMPORTED_MODULE_0__["default"].twoTime2Int(rw);
+            let rrInt = _common__WEBPACK_IMPORTED_MODULE_0__["default"].twoTime2Int(rr);
+            let hasError = false;
+            if(rwInt[0] > rrInt[0])hasError = true;
+            if(rwInt[1] < rrInt[1])hasError = true;
+            if(hasError){
+                alert(`実労働時間外に実休憩時間が設定されています。
+                    \n予定労働時間：${rw}
+                    \n予定休憩時間：${rr}`);
+                return false;
+            }
+        }
+        return true;
+    }
+    update(shift);
+    return {getShift: function(){return shift}};
 });
 
 /***/ })

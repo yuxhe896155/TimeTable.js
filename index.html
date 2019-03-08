@@ -4,10 +4,55 @@
     <meta charset="UTF-8">
     <title>TimeTable.js</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./jquery-clock-timepicker.min.js"></script>
     <script src="./dist/TimeTable.js"></script>
 </head>
 <body>
     <div id="timetable"></div>
     <div id="debug"></div>
+    <button id="getShift">現在のシフト取得</button>
+    <div id="shift"></div>
+    <script>
+       let a = TimeTable({
+        startTime: "10:00",
+        endTime: "22:00",
+        divTime: "15",
+        shift:{
+            "12": {
+                name: "MARK",
+                planWork: "10:00-15:00",
+                planRest: "12:00-13:00",
+                realWork: "11:00-16:00",
+                realRest: "13:00-14:00",
+                },
+            "4": {
+                name: "JOHN",
+                planWork: "09:00-18:00",
+                planRest: "13:00-14:00",
+                realWork: "09:00-18:00",
+                realRest: "14:00-15:15",
+                },
+            "8": {
+                name: "JOB",
+                planWork: "11:00-18:00",
+                planRest: "13:00-14:00",
+                realWork: "09:00-18:00",
+                realRest: "14:00-15:15",
+                },
+                
+            "10": {
+                name: "NOJOBMAN",
+                planWork: "",
+                planRest: "",
+                realWork: "",
+                realRest: "",
+                },
+        }
+    });
+    $("#getShift").on("click", function(){
+        let str = JSON.stringify(a.getShift());
+        $("#shift").html(str);
+    });
+    </script>
 </body>
 </html>

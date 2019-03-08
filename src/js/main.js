@@ -95,12 +95,16 @@ export default function(obj){
                 $(rowData).append(name);
                 // シフト列
                 let ttRow = $(`<div class="tt-row_data"></div>`);
+                $(ttRow).on("click", function(){
+                    // 押下した個別のシフトを渡す
+                    dispDialog(d,key);
+                });
                 ttRow = setTimeDiv(ttRow, d);
                 $(rowData).append(ttRow);
                 // 時間がある場合のみ
                 let time = 0;
                 if(d.planWork){
-                    let planTime = cm.twoTime2Int(d.planWork);
+                    let planTime = (d.planWork.length)? cm.twoTime2Int(d.planWork): [0,0];
                     time = planTime[1] - planTime[0];
                     if(d.planRest){
                         let planRest = cm.twoTime2Int(d.planRest);
@@ -108,22 +112,144 @@ export default function(obj){
                     }
                 }
                 // 合計
-                $(rowData).append(`<div>${time/60}H</div>`);
+                $(rowData).append(`<div>${(time)?time/60:0}H</div>`);
                 $("#timetable").append(rowData);
             }
         }
     }
-    update(shift);
-    // イベントのはっつけ
-    $(document).on("click", ".js-name", function(){
-        let key = $(this).attr("id");
-        shift[key].planWork = "15:00-18:00";
-        // 消す
-        let rows = $(".tt-row");
-        for(let i = 0; i < rows.length; i++){
-            $(rows[i]).off();
-            $(rows[i]).remove();
+    function dispDialog(d,key){
+        let overlay = $(`<div class="tt-overlay"><div class="tt-overlayQ"></div></div>`).css({
+            height: window.innerHeight,
+            width: window.innerWidth
+        });
+        let planWork = (d.planWork)? [d.planWork.substring(0,5),d.planWork.substring(6,11)]: ["",""];
+        let planRest= (d.planRest)?  [d.planRest.substring(0,5),d.planRest.substring(6,11)]: ["",""];
+        let realWork = (d.realWork)? [d.realWork.substring(0,5),d.realWork.substring(6,11)]: ["",""];
+        let realRest= (d.realRest)?  [d.realRest.substring(0,5),d.realRest.substring(6,11)]: ["",""];
+        // ダイアログの中身
+        $("body").append(overlay);
+        let dialog = $(
+            `<div class="tt-dialog">
+                <div class="dialog-name">${d.name}</div>
+                <div class="dialog-time">
+                    予定労働時間: 
+                    <input type="time" id="planWorkStart" value="${planWork[0]}"> - <input type="time" id="planWorkEnd" value="${planWork[1]}">
+                </div>
+                <hr>
+                <div class="dialog-time">
+                    予定休憩時間: 
+                    <input type="time" id="planRestStart" value="${planRest[0]}"> - <input type="time" id="planRestEnd" value="${planRest[1]}">
+                </div>
+                <hr>
+                <div class="dialog-time">
+                    　実労働時間: 
+                    <input type="time" id="realWorkStart" value="${realWork[0]}"> - <input type="time" id="realWorkEnd" value="${realWork[1]}">
+                </div>
+                <hr>
+                <div class="dialog-time">
+                    　実休憩時間: 
+                    <input type="time" id="realRestStart" value="${realRest[0]}"> - <input type="time" id="realRestEnd" value="${realRest[1]}">
+                </div>
+                <hr>
+                <div class="dialog-time dialog-btn"></div>
+            </div>`);
+        // ボタンイベント
+        let okBtn = $(`<button class="tt-btn tt-btn_ok">OK</button>`).on("click",function(){
+            let pw = `${$("#planWorkStart").val()}-${$("#planWorkEnd").val()}`;
+            let pr = `${$("#planRestStart").val()}-${$("#planRestEnd").val()}`;
+            let rw = `${$("#realWorkStart").val()}-${$("#realWorkEnd").val()}`;
+            let rr = `${$("#realRestStart").val()}-${$("#realRestEnd").val()}`;
+            if(!checkTime(pw, pr, rw, rr))return false;
+            shift[key].planWork = (pw !== "-")?pw:"";
+            shift[key].planRest = (pr !== "-")?pr:"";
+            shift[key].realWork = (rw !== "-")?rw:"";
+            shift[key].realRest = (rr !== "-")?rr:"";
+            $(".tt-overlay").remove();
+            update(shift);
+        });
+        let cancelBtn = $(`<button class="tt-btn tt-btn_cancel">Cancel</button>`).on("click",function(){
+            $(".tt-overlay").remove();
+        });
+        dialog = $(dialog).find(".dialog-btn")
+            .append(okBtn).append(cancelBtn).end();
+        $(".tt-overlayQ").append(dialog);
+        // 労働時間系のイベント付与
+        let option = {
+            autosize: false,
+            useAmPm: false,
+            precision: 15,
+            fonts: {
+                clockOuterCircleFontSize: "14px",
+                clockInnerCircleFontSize: "14px",
+            },
+            minimum: cm.int2Time(startTime),
+            maximum: cm.int2Time(endTime),
+            onChange:function(newTime,oldTime){
+                this.value = (!newTime.length)? "": newTime;
+            }
         }
-        setTimeout(()=>{update(shift)},0);
-    });
+        option.value = "18:00";
+        $("#planWorkStart").clockTimePicker(option);
+        $("#planWorkEnd").clockTimePicker(option);
+        $("#planRestStart").clockTimePicker(option);
+        $("#planRestEnd").clockTimePicker(option);
+        $("#realWorkStart").clockTimePicker(option);
+        $("#realWorkEnd").clockTimePicker(option);
+        $("#realRestStart").clockTimePicker(option);
+        $("#realRestEnd").clockTimePicker(option);
+    }
+    function checkTime(pw,pr,rw,rr){
+        let times = [pw,pr,rw,rr];
+        // 開始がないor終了がない
+        for(let i in times){
+            let hasError = false;
+            if(times[i].length === 6)hasError = true;
+            if(hasError){
+                alert(`開始 or 終了時間の一方が欠けている時間があります。\n${times[i]}`);
+                return false;
+            }
+        }
+        // 各々の開始 >= 終了になっていないか
+        for(let i in times){
+            // 空の時間は飛ばす
+            if(!times[i][0].length)continue;
+            let s = cm.time2Int(times[i].substring(0,5));
+            let e = cm.time2Int(times[i].substring(6,11));
+            if(s >= e){
+                alert(`開始時間が終了時間よりも遅いor同じ時間があります。\n${times[i]}`);
+                return false;
+            }
+        }
+        // 予定労働時間&予定休憩時間がある
+        if(pw.length === 11 && pr.length === 11){
+            let pwInt = cm.twoTime2Int(pw);
+            let prInt = cm.twoTime2Int(pr);
+            let hasError = false;
+            if(pwInt[0] > prInt[0])hasError = true;
+            if(pwInt[1] < prInt[1])hasError = true;
+            if(hasError){
+                alert(`予定労働時間外に予定休憩時間が設定されています。
+                    \n予定労働時間：${pw}
+                    \n予定休憩時間：${pr}`);
+                return false;
+            }
+        }
+        // 実労働時間&実休憩時間がある
+        if(pw.length === 11 && pr.length === 11){
+            let rwInt = cm.twoTime2Int(rw);
+            let rrInt = cm.twoTime2Int(rr);
+            let hasError = false;
+            if(rwInt[0] > rrInt[0])hasError = true;
+            if(rwInt[1] < rrInt[1])hasError = true;
+            if(hasError){
+                alert(`実労働時間外に実休憩時間が設定されています。
+                    \n予定労働時間：${rw}
+                    \n予定休憩時間：${rr}`);
+                return false;
+            }
+        }
+        return true;
+    }
+    update(shift);
+    return {getShift: function(){return shift}};
 }

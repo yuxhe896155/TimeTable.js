@@ -74,7 +74,6 @@ export default {    /**
         let ret = [];
         for(let key in obj){
             let t = obj[key].planWork;
-            
             if(t === ""){
                 let t = {};
                 t[key] = obj[key];
@@ -98,7 +97,6 @@ export default {    /**
             }
         }
         ret = ret.concat(noTimes);
-        console.log(ret)
         return ret;
     },
     /**
