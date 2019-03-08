@@ -66,13 +66,15 @@ export default {    /**
     * かなり適当
     * シフトが入っていない人は後ろの配列にくる
     */
-    orderByShift: function(obj){
+    orderByShift: function(shift){
+        let obj = JSON.parse(JSON.stringify(shift));
         let times = [];
         // シフトがまだの人の配列
         let noTimes = [];
         let ret = [];
         for(let key in obj){
             let t = obj[key].planWork;
+            
             if(t === ""){
                 let t = {};
                 t[key] = obj[key];
@@ -84,17 +86,19 @@ export default {    /**
         noTimes.sort();
         times.sort();
         for(let i in times){
-            console.log(i);
+            let dupFlg = false;
             for(let key in obj){
-                console.log(Object.keys(obj).length);
-                if(obj[key].planWork === times[i]){
+                if(obj[key].planWork === times[i] && !dupFlg){
                     let t = {};
                     t[key] = obj[key];
+                    delete obj[key];
+                    
                     ret.push(t);
                 }
             }
         }
         ret = ret.concat(noTimes);
+        console.log(ret)
         return ret;
     },
     /**
